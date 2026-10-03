@@ -1,0 +1,41 @@
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.csr
+*.jks
+*.kdbx
+id_rsa*
+id_ed25519*
+id_ecdsa*
+secrets/
+*.secret
+
+# Raw dumps that tend to contain sensitive detail
+*.pcap
+*.pcapng
+scan-output/
+nmap-*.txt
+
+# Editors
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Generated / local
+*.log
+.claude/
+node_modules/
