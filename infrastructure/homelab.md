@@ -53,6 +53,7 @@ The homelab is where I run my own services and where I learn by operating them. 
 
 - Public services use outbound tunnels, not inbound port forwards.
 - Internal services are limited to LAN and Tailscale. Unknown hostnames do not expose anything.
+- Remote login is key-only, with brute-force blocking, and the widest firewall rules have been narrowed to the home network. Services with no login of their own are kept off the network entirely.
 - A pre-commit secret scanner blocks commits that contain likely secrets.
 - Secrets live in git-ignored environment files. Some stacks refuse to start if a secret is missing, so they cannot fall back to defaults.
 - Updates are opt-in per container through labels. A self-hosted notification service reports update activity.
