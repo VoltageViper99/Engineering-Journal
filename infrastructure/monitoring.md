@@ -29,7 +29,7 @@ Know when a service is down or misbehaving before I rely on it, and confirm that
 ## Tools and approach
 
 - **Uptime Kuma** for service health checks.
-- **Dozzle** for live container logs, which is the fastest way to see why a container is unhappy.
+- **Dozzle** for live container logs, which is the fastest way to see why a container is unhappy. It has its own login and is reached only through the private proxy.
 - **A UPS dashboard** for power status.
 - **ntfy**, self-hosted, for push notifications. Watchtower reports container updates through it.
 - **Control Centre** as the internal starting point for reaching services (see [Control Centre](../projects/control-centre.md)).
