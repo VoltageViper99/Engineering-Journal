@@ -41,7 +41,8 @@ Describe roles, not addresses.
 ## Before commit checklist
 
 - [ ] Search for secrets (see below)
-- [ ] Review every screenshot, including browser tabs, URLs and notifications
+- [ ] Review every screenshot, including browser tabs, URLs and notifications (see `assets/README.md`)
+- [ ] Strip image metadata and prefer cropped or redrawn diagrams over full-screen captures
 - [ ] Remove customer identifiers
 - [ ] Sanitise addresses and IPs
 - [ ] Check config examples are generic and contain no real values
@@ -49,18 +50,22 @@ Describe roles, not addresses.
 - [ ] Confirm no private keys or certificates are staged
 - [ ] Confirm the content is suitable for a public repo
 
-## Lightweight secret scanning
+## Secret scanning
 
-Run a quick check before each commit:
+Scanning runs locally in a pre-commit hook using [gitleaks](https://github.com/gitleaks/gitleaks). There is no CI.
 
-```sh
-git diff --staged | grep -nEi 'password|passwd|secret|token|api[_-]?key|BEGIN [A-Z ]*PRIVATE KEY|[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'
-```
+One-time setup per clone:
 
-Recommended, no CI required:
+1. Install gitleaks (https://github.com/gitleaks/gitleaks#installing).
+2. Enable the tracked hook: `git config core.hooksPath .githooks`
 
-- Run [gitleaks](https://github.com/gitleaks/gitleaks) locally (`gitleaks protect --staged`), optionally as a pre-commit hook.
-- Enable GitHub secret scanning and push protection once the remote exists.
+The hook scans staged changes and refuses the commit if anything matches. It **fails closed**: if gitleaks is not installed, commits are refused. `.gitleaks.toml` keeps the default rules and adds rules for private/Tailscale IPv4 addresses and `.ts.net` hostnames.
+
+Handling false positives: fix the content if you can. Otherwise add a narrow allowlist entry (specific path and pattern) to `.gitleaks.toml` with a comment saying why it is safe. Do not use `--no-verify`, and do not disable rules. No allowlist is currently needed, including for this guide.
+
+Run a full scan of history at any time: `gitleaks git --redact --config .gitleaks.toml`
+
+Also enable GitHub secret scanning and push protection on the remote (Settings → Code security).
 
 If a secret is ever committed, rotate it first. Removing it from history is secondary, because it must be treated as compromised.
 

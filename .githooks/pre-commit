@@ -1,0 +1,21 @@
+#!/bin/sh
+# Blocks commits whose staged changes contain likely secrets or internal addresses.
+# Fails closed: if gitleaks is missing, the commit is refused.
+
+cd "$(git rev-parse --show-toplevel)" || exit 1
+
+if ! command -v gitleaks >/dev/null 2>&1; then
+  cat >&2 <<'MSG'
+pre-commit: gitleaks is not installed, so staged changes cannot be scanned.
+Install it (https://github.com/gitleaks/gitleaks#installing) and retry.
+Do not bypass this hook for a public repository.
+MSG
+  exit 1
+fi
+
+# gitleaks >= 8.19 uses `git --staged`; older versions use `protect --staged`.
+if gitleaks git --help >/dev/null 2>&1; then
+  gitleaks git --staged --redact --config .gitleaks.toml --no-banner
+else
+  gitleaks protect --staged --redact --config .gitleaks.toml --no-banner
+fi
