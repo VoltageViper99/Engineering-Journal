@@ -30,7 +30,6 @@ Know when a service is down or misbehaving before I rely on it, and confirm that
 
 - **Uptime Kuma** for service health checks.
 - **Dozzle** for live container logs, which is the fastest way to see why a container is unhappy.
-- **Portainer** for Docker status and management.
 - **A UPS dashboard** for power status.
 - **ntfy**, self-hosted, for push notifications. Watchtower reports container updates through it.
 - **Control Centre** as the internal starting point for reaching services (see [Control Centre](../projects/control-centre.md)).
@@ -58,6 +57,5 @@ Update policy follows the same idea. Low-risk services update automatically and 
 
 ## Current direction
 
-- Repoint monitors after the reverse proxy migration.
-- Keep monitors and links in step with each service move.
+- Keep monitors and links in step with each service move. The media monitors already use container names, because the proxy only answers LAN and Tailscale sources and a monitor inside a container cannot use the proxied names.
 - Add visibility into security issues and vulnerabilities in running containers. This is a goal, not something in place yet.

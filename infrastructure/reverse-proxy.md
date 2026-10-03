@@ -39,7 +39,9 @@ Client
 
 ## Status
 
-Media services are already being moved to this model. Further services will follow.
+The media stack is fully behind the proxy, and its direct host ports have been closed to the network. Other services will follow one at a time.
+
+Proxying a service does not close its original port. That is a separate step, done only after checking what still depends on the port and repointing it. See [the dated entry](../journal/2026/2026-10-04.md) for how that went.
 
 ## Deliberately not published
 

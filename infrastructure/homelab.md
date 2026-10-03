@@ -38,13 +38,14 @@ The homelab is where I run my own services and where I learn by operating them. 
 - Monitoring, log viewing and push notifications (see [Monitoring](monitoring.md))
 - Business tooling for Supporter Invoicing, such as agreement signing, licence records and automation
 - A central internal dashboard (see [Control Centre](../projects/control-centre.md))
+- A self-hosted design and prototyping tool
 
 ## Design principles
 
 - **Infrastructure as code.** A stack can be rebuilt from its definition.
 - **Internal by default.** Public exposure is the exception and needs a reason.
 - **Names, not ports.** Reach services by name instead of remembered host ports and addresses.
-- **Fewer moving parts.** Retire a tool when another covers it. Homarr gave way to the Control Centre, and a self-hosted Git service was removed when hosting moved back to GitHub.
+- **Fewer moving parts.** Retire a tool when another covers it. Homarr gave way to the Control Centre, Portainer went once Uptime Kuma and Dozzle covered what I used it for, and a self-hosted Git service was removed when hosting moved back to GitHub.
 - **Keep secrets and data out of version control.**
 - **Match update risk to the service.** Low-risk services update themselves. Anything with a database, family data or business impact is updated by hand.
 
@@ -55,13 +56,13 @@ The homelab is where I run my own services and where I learn by operating them. 
 - A pre-commit secret scanner blocks commits that contain likely secrets.
 - Secrets live in git-ignored environment files. Some stacks refuse to start if a secret is missing, so they cannot fall back to defaults.
 - Updates are opt-in per container through labels. A self-hosted notification service reports update activity.
-- Obsolete rules and services are removed rather than left behind. Recent examples are retired firewall rules, a redundant dashboard and a backup folder that contained key material. The last one is written up in [Signing Key Committed to Version Control](../security/incident-response.md).
+- Obsolete rules and services are removed rather than left behind. Recent examples are retired firewall rules, a redundant dashboard, an unneeded Docker management tool and a backup folder that contained key material. The last one is written up in [Signing Key Committed to Version Control](../security/incident-response.md).
 - Hardening is an ongoing learning plan for the host, not a finished state.
 
 ## Current direction
 
-- Finish moving services behind the internal reverse proxy, starting with the media stack.
-- Narrow host-port exposure where it is safe to do so.
+- Keep moving the remaining services behind the internal reverse proxy, one at a time. The media stack is done.
+- Narrow host-port exposure where it is safe to do so, after checking what depends on each port.
 - Add the remaining media tooling.
 - Keep monitoring aligned with the new service names.
 - Continue cleanup and hardening.
