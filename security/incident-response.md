@@ -16,11 +16,11 @@ A sanitised case study. It covers the approach and the lessons, not the operatio
 
 ## Summary
 
-Key material for a self-hosted e-signature service was committed to a version-controlled infrastructure repository. It arrived inside a manual backup folder, not as a deliberate file. I treated the key as compromised from the moment I found it, replaced it, and made the repository refuse that class of file in future. No customer data was involved.
+Key material for a self-hosted e-signature service was committed to a version-controlled infrastructure repository: a private key, a certificate and the bundled certificate file the service loads. Part of it arrived inside a manual backup folder, not as a deliberate file. I treated the key as compromised from the moment I found it, replaced it, and made the repository refuse that class of file in future. No customer data was involved.
 
 ## Timeline
 
-- **2026-09-25:** the backup folder, containing a private key and certificate, was committed in a work-in-progress commit.
+- **2026-09-25:** the backup folder, containing a private key and certificate, was committed. The bundled certificate file was also committed in a work-in-progress commit.
 - **2026-10-03:** found during a cleanup of backup folders. The same day I removed it from the working tree, blocked the file types, rotated the key, and tested the signing flow end to end.
 
 ## Detection
@@ -45,7 +45,7 @@ I found it by reviewing what the repository actually tracked while removing old 
 
 - Removed the backup folder from the tree and stopped keeping manual backups inside the repository.
 - Moved another service's secrets out of a tracked config file and into a git-ignored environment file, after noticing the same pattern there.
-- Still to do: remove the old key from git history and delete leftover copies on the host. The old key is no longer used, but it stays in history until that is done.
+- Removed the old key material from git history and deleted leftover copies on the host. Cleanup is complete.
 
 ## Prevention
 
