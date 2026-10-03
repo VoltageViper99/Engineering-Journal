@@ -29,10 +29,12 @@ Know when a service is down or misbehaving before I rely on it, and confirm that
 ## Tools and approach
 
 - **Uptime Kuma** for service health checks.
-- **Dozzle** for live container logs.
+- **Dozzle** for live container logs, which is the fastest way to see why a container is unhappy.
 - **Portainer** for Docker status and management.
+- **A UPS dashboard** for power status.
 - **ntfy**, self-hosted, for push notifications. Watchtower reports container updates through it.
 - **Control Centre** as the internal starting point for reaching services (see [Control Centre](../projects/control-centre.md)).
+- **Log rotation** on chatty containers, so a runaway error loop cannot fill the disk. Watchtower's logs are capped for this reason.
 
 ## How monitoring fits change management
 
@@ -45,11 +47,14 @@ After a migration:
 3. Check that each service responds through its new path.
 4. Retire monitors and links for anything removed.
 
+Update policy follows the same idea. Low-risk services update automatically and report through notifications. Services with databases, family data or business impact are updated by hand, and I check them afterwards.
+
 ## Security and reliability considerations
 
 - Monitoring tools are administrative interfaces, so they are kept internal.
 - The monitors run on the same host as the services they watch. A whole-host outage can silence them as well, and an independent check from outside is a gap to consider.
-- Notifications are only useful if someone reads them, so noise should stay low.
+- Notification quality matters. A notification topic shared with unrelated projects once mixed update notices with unrelated noise, and the noise was mistaken for errors. Dedicated, clearly named topics fixed it.
+- A monitor that nobody reads is no monitor, so noise should stay low.
 
 ## Current direction
 
