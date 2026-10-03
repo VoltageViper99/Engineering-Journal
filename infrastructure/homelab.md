@@ -52,6 +52,7 @@ The homelab is where I run my own services and where I learn by operating them. 
 
 - Public services use outbound tunnels, not inbound port forwards.
 - Internal services are limited to LAN and Tailscale. Unknown hostnames do not expose anything.
+- A pre-commit secret scanner blocks commits that contain likely secrets.
 - Secrets live in git-ignored environment files. Some stacks refuse to start if a secret is missing, so they cannot fall back to defaults.
 - Updates are opt-in per container through labels. A self-hosted notification service reports update activity.
 - Obsolete rules and services are removed rather than left behind. Recent examples are retired firewall rules, a redundant dashboard and a backup folder that contained key material. The last one is written up in [Signing Key Committed to Version Control](../security/incident-response.md).
@@ -63,7 +64,6 @@ The homelab is where I run my own services and where I learn by operating them. 
 - Narrow host-port exposure where it is safe to do so.
 - Add the remaining media tooling.
 - Keep monitoring aligned with the new service names.
-- Add secret scanning to the infrastructure repository.
 - Continue cleanup and hardening.
 
 See the [journal](../journal/2026/) for dated changes.

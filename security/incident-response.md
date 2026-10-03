@@ -51,8 +51,7 @@ I found it by reviewing what the repository actually tracked while removing old 
 
 - `.gitignore` now blocks private keys, certificate bundles and backup files by extension and folder name.
 - Secrets live in git-ignored environment files. Where possible, the stack refuses to start if a secret is missing, so it cannot fall back to a default login.
-- This public journal has a local secret-scanning hook (gitleaks) that blocks commits containing likely secrets. See the [publication guide](../PUBLICATION-GUIDE.md).
-- Next step: add the same hook to the infrastructure repository. It is not in place there yet.
+- Both this public journal and the infrastructure repository now have a local secret-scanning hook (gitleaks) that blocks commits containing likely secrets. It refuses to commit if the scanner is missing. I tested it with a fake token before relying on it. See the [publication guide](../PUBLICATION-GUIDE.md).
 
 ## What I learned
 
