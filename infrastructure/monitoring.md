@@ -31,7 +31,7 @@ Know when a service is down or misbehaving before I rely on it, and confirm that
 - **Uptime Kuma** for service health checks.
 - **Dozzle** for live container logs, which is the fastest way to see why a container is unhappy. It has its own login and is reached only through the private proxy.
 - **A UPS dashboard** for power status.
-- **ntfy**, self-hosted, for push notifications. Watchtower reports container updates through it.
+- **ntfy**, self-hosted, for push notifications. Watchtower and Uptime Kuma publish to it as limited accounts, and my phone subscribes over https. It denies everything by default and is reached only through the private proxy.
 - **Control Centre** as the internal starting point for reaching services (see [Control Centre](../projects/control-centre.md)).
 - **Log rotation** on chatty containers, so a runaway error loop cannot fill the disk. Watchtower's logs are capped for this reason.
 
