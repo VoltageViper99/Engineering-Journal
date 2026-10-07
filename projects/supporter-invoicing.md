@@ -38,7 +38,7 @@ flowchart LR
 - **Website:** static pages on Cloudflare Pages. Its server-side functions hold the API token, so it never reaches the browser.
 - **Signed agreement first:** a small service on the homelab collects a signed agreement through a self-hosted Documenso instance before anyone is given a payment link. It is rate-limited and reached only through a Cloudflare Tunnel.
 - **Payment:** Stripe. A verified webhook triggers licence issuing.
-- **Licences:** a Cloudflare Worker signs one licence token per seat, bundles them into a PDF and emails it. A small KV store enforces one-time activation per key.
+- **Licences:** a Cloudflare Worker signs one licence token per seat, bundles them into a PDF and emails it. A small KV store records the first device to activate each key, and the app needs the internet only for that one check.
 - **Releases:** installers are built in CI for Windows, macOS and Debian, signed, published to object storage and listed in a manifest. The app checks the manifest and verifies a SHA-256 digest before opening an installer.
 - **Visibility:** the [Control Centre](control-centre.md) shows the pipeline's health.
 
@@ -50,7 +50,7 @@ Python (Flask, SQLite), Cloudflare Pages, Workers, KV, R2 and Tunnel, Stripe, Do
 
 - Defined the product, the purchase flow and the order of steps (agreement, then payment, then licence).
 - Chose and connected the services, and deployed the website, Worker and homelab services.
-- Set up the secrets handling, the tunnel exposure and the failover scripts for the automation service.
+- Set up the secrets handling and the tunnel exposure, and tried out failing the automation service over to a second machine as a test.
 - Tested the whole purchase flow end to end, debugged failures and documented the setup.
 - **AI-assisted development:** the application and service code was written mostly with Claude. I specified it, tested it and run it.
 
@@ -60,7 +60,8 @@ Python (Flask, SQLite), Cloudflare Pages, Workers, KV, R2 and Tunnel, Stripe, Do
 - **Keep secrets server-side.** The browser never sees the automation token. Secrets live in git-ignored files or Worker secrets.
 - **No inbound ports.** The homelab services are reached through an outbound Cloudflare Tunnel.
 - **Signed installer over a store package** on Windows, to avoid store review for each release.
-- **Back out risky gates.** An earlier licence-key gate stopped the packaged app launching and was reverted. A one-time activation check was added later in a safer form.
+- **Online check once, then offline.** The app makes a one-time online check that a licence key is valid, then needs no internet connection. Licence tokens are signed, so the app can verify them without calling home each time.
+- **Back out risky gates.** An earlier licence-key gate stopped the packaged app launching and was reverted before the current activation check replaced it.
 
 ## Security considerations
 
