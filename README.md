@@ -41,7 +41,9 @@ This repository is where I write that work down: what I built or changed, why, w
 
 **Control Centre.** An internal dashboard for Docker stacks, host health and a music remote. The code was largely written with AI assistance; I wrote the requirements, chose the architecture and run it. [Control Centre](projects/control-centre.md).
 
-**Other projects.** [VoltOS](projects/voltos.md), [VoltOps](projects/volt-ops.md), [Holocron Kiosk](projects/holocron-kiosk.md), [Supporter Invoicing](projects/supporter-invoicing.md).
+**Supporter Invoicing.** A live product with a public website and a purchase pipeline I built and run: signed agreement (self-hosted Documenso), Stripe payment, Cloudflare Worker licence issuing and CI-built signed installers. The code was largely AI-assisted; the pipeline design, deployment and testing are mine. [Supporter Invoicing](projects/supporter-invoicing.md).
+
+**Other projects.** [VoltOS](projects/voltos.md), [VoltOps](projects/volt-ops.md), [Holocron Kiosk](projects/holocron-kiosk.md).
 
 ## Skills demonstrated
 
