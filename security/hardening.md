@@ -31,11 +31,11 @@ Approach and controls only. Exact rules, addresses and port lists are not publis
 - Notification access uses limited accounts with deny-by-default.
 - Secrets live in git-ignored files, and a fail-closed pre-commit scanner blocks likely secrets.
 - Public services use outbound Cloudflare Tunnels rather than port forwards.
+- Trivy scans the host and running containers for known vulnerabilities, with results on the Control Centre's Security page. Low-risk containers update automatically, and the rest are updated by hand after checking.
 
 ## Known gaps
 
 - Monitoring runs on the host it watches.
-- Vulnerability visibility for running containers is a goal, not in place yet.
 - Hardening is ongoing, not a finished state.
 
 ## Evidence

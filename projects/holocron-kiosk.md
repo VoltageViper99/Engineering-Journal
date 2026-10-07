@@ -25,6 +25,7 @@ The first version used a Chromium-based kiosk. It kept hitting browser behaviour
 
 - The Control Centre server does the data collection. The kiosk only renders pages and plays audio.
 - The client talks to the server over the network and starts at boot through a systemd service on the display box.
+- The kiosk tells me when an update is available, syncs with the server and updates itself afterwards.
 - The earlier single-screen app and terminal client are kept in the repo, unmaintained, for reference.
 
 ## Technologies
