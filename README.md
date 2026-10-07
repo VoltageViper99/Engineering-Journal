@@ -33,7 +33,7 @@ This repository is where I write that work down: what I built or changed, why, w
 
 **Homelab and reverse proxy.** One Docker host running Compose stacks defined in version control, with internal services reached by name through a private Caddy proxy over LAN and Tailscale. A few services are published through Cloudflare Tunnel instead of port forwards. *What I did:* designed the layout, deployed and migrated the services, and wrote the migration order and rollback steps. [Homelab](infrastructure/homelab.md), [Reverse proxy](infrastructure/reverse-proxy.md).
 
-**Security hardening and exposure audit.** Audited what the server really listens on, then moved SSH to key-only with fail2ban, narrowed firewall rules, put logins and TLS on admin tools, and closed direct ports. *What I did:* chose the method (repoint first, close second), tested every change from a fresh connection, and verified the apps still worked. [Journal, 2026-10-04](journal/2026/2026-10-04.md), [Hardening](security/hardening.md).
+**Security hardening and exposure audit.** Audited what the server really listens on, then moved SSH to key-only with fail2ban, narrowed firewall rules, put logins and TLS on admin tools, and closed direct ports. *What I did:* chose the method (repoint first, close second), tested every change from a fresh connection, and verified the apps still worked. [Journal, 04/10/2026](journal/2026/2026-10-04.md), [Hardening](security/hardening.md).
 
 **Incident response.** A private key reached a git repository through a backup folder. I contained it, rotated it, debugged two configuration failures and added a fail-closed secret-scanning hook. [Case study](security/incident-response.md).
 
@@ -60,10 +60,10 @@ Only things evidenced in this repo.
 
 Latest entries (full list in the [journal index](journal/README.md)):
 
-- 2026-10-04: [Retiring Portainer and hardening network exposure](journal/2026/2026-10-04.md)
-- 2026-10-03: [Internal reverse proxy rollout](journal/2026/2026-10-03.md)
-- 2026-09-29: [Scoped automatic container updates](journal/2026/2026-09-29.md)
-- 2026-09-26: [Container update tooling and service cleanup](journal/2026/2026-09-26.md)
+- 04/10/2026: [Retiring Portainer and hardening network exposure](journal/2026/2026-10-04.md)
+- 03/10/2026: [Internal reverse proxy rollout](journal/2026/2026-10-03.md)
+- 29/09/2026: [Scoped automatic container updates](journal/2026/2026-09-29.md)
+- 26/09/2026: [Container update tooling and service cleanup](journal/2026/2026-09-26.md)
 
 ## Current learning
 

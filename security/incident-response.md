@@ -22,8 +22,8 @@ Key material for a self-hosted e-signature service was committed to a version-co
 
 ## Timeline
 
-- **2026-09-25:** the backup folder, containing a private key and certificate, was committed. The bundled certificate file was also committed in a work-in-progress commit.
-- **2026-10-03:** found during a cleanup of backup folders. The same day I removed it from the working tree, blocked the file types, rotated the key, and tested the signing flow end to end.
+- **25/09/2026:** the backup folder, containing a private key and certificate, was committed. The bundled certificate file was also committed in a work-in-progress commit.
+- **03/10/2026:** found during a cleanup of backup folders. The same day I removed it from the working tree, blocked the file types, rotated the key, and tested the signing flow end to end.
 
 ## Detection
 

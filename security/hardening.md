@@ -40,5 +40,5 @@ Approach and controls only. Exact rules, addresses and port lists are not publis
 
 ## Evidence
 
-- [Journal, 2026-10-04](../journal/2026/2026-10-04.md): the audit and the changes in order.
+- [Journal, 04/10/2026](../journal/2026/2026-10-04.md): the audit and the changes in order.
 - [Incident case study](incident-response.md): what happens when a secret slips through.
