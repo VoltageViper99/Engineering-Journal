@@ -56,7 +56,7 @@ Scanning runs locally in a pre-commit hook using [gitleaks](https://github.com/g
 
 One-time setup per clone:
 
-1. Install gitleaks (https://github.com/gitleaks/gitleaks#installing).
+1. Install gitleaks <https://github.com/gitleaks/gitleaks#installing>.
 2. Enable the tracked hook: `git config core.hooksPath .githooks`
 
 The hook scans staged changes and refuses the commit if anything matches. It **fails closed**: if gitleaks is not installed, commits are refused. `.gitleaks.toml` keeps the default rules and adds rules for private/Tailscale IPv4 addresses and `.ts.net` hostnames.

@@ -9,8 +9,10 @@ tags:
   - Security
 summary: A self-hosted Linux and Docker lab that runs my everyday services and doubles as a place to learn, test and practise safe operations.
 public: true
-featured: false
+featured: true
 ---
+
+[Back to infrastructure](README.md)
 
 This is a high-level overview. It deliberately leaves out addresses, network layout, firewall details and a service-by-service inventory.
 
@@ -27,6 +29,20 @@ The homelab is where I run my own services and where I learn by operating them. 
 - Each proxied service shares a small private network with the proxy only, so services stay isolated from each other.
 - A small number of services are published to the internet through Cloudflare Tunnels. That is a separate path from the internal proxy.
 - A shared network lets the monitoring stack reach other stacks directly for health checks.
+
+```mermaid
+flowchart TB
+  H[Linux host + Docker] --> S[Compose stacks<br/>one per service group]
+  S --> N[Private per-service networks]
+  N --> P[Caddy internal proxy]
+  P --> U[Clients on LAN / Tailscale]
+  S -.-> M[Monitoring + notifications]
+  S -.-> T[Cloudflare Tunnel<br/>selected public services]
+```
+
+## My role
+
+I designed the layout and the principles below, deployed and migrated the services, and operate the lab day to day. I audit and harden it, and I write up each change. Some configuration and helper tooling was drafted with AI assistance. I review, test and own what runs.
 
 ## What it supports
 
