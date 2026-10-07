@@ -46,6 +46,18 @@ The Control Centre's view of the pipeline (container health, the Cloudflare Work
 
 ![Control Centre invoicing pipeline page showing healthy automation and licence database containers, one Cloudflare Worker and two healthy tunnels](../assets/screenshots/invoicing-pipeline.png)
 
+## The app
+
+The desktop app itself, shown with blank demo data: first-time setup, creating an invoice, the invoice preview with PDF and email options, and the earnings page.
+
+![Supporter Invoicing first-time setup form for business and payment details](../assets/screenshots/invoicing-app-setup.png)
+
+![New invoice form with client, dates, support items and GST setting](../assets/screenshots/invoicing-app-new-invoice.png)
+
+![Draft invoice preview with save as PDF, prepare email and status buttons](../assets/screenshots/invoicing-app-invoice-preview.png)
+
+![Earnings page with paid invoices, additional income and a form to add income](../assets/screenshots/invoicing-app-earnings.png)
+
 ## Technologies
 
 Python (Flask, SQLite), Cloudflare Pages, Workers, KV, R2 and Tunnel, Stripe, Documenso, Resend, Docker Compose, GitHub Actions, Inno Setup, code signing.
