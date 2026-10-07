@@ -20,7 +20,7 @@ VoltOps (the repair-tracker app) tracks repair jobs through to pickup, generates
 
 ## Problem
 
-I was tracking jobs and finances with a mix of tools and paper. I wanted one local app that matched how a small repair shop works and could eventually replace my bookkeeping software.
+I was tracking jobs and finances with a mix of tools. I wanted one local app that matched how a small repair shop works. It has since replaced my bookkeeping software.
 
 ## Architecture
 
@@ -31,7 +31,7 @@ I was tracking jobs and finances with a mix of tools and paper. I wanted one loc
 
 ## Technologies
 
-Python, pywebview, SQLite, Cloudflare Workers, RPM packaging, a PDF rasteriser for the in-app viewer.
+Python, pywebview, SQLite, Cloudflare Workers, RPM packaging.
 
 ## My role
 
@@ -45,7 +45,7 @@ Python, pywebview, SQLite, Cloudflare Workers, RPM packaging, a PDF rasteriser f
 - **Money as integer cents** everywhere, with one helper doing the only dollars conversion.
 - **Additive, guarded schema changes** so re-running the app upgrades an existing database safely.
 - **Slow or flaky integrations run isolated** from the UI, so a dead external API cannot hang the app.
-- **Own PDF viewer.** The system and browser PDF renderers were not trustworthy for invoices.
+- **Hand PDFs to the system viewer.** An in-app viewer was built and then removed after it caused a memory leak (see below). Setting a reliable system default fixed the original problem more simply.
 
 ## Security considerations
 
@@ -54,18 +54,18 @@ Python, pywebview, SQLite, Cloudflare Workers, RPM packaging, a PDF rasteriser f
 
 ## Testing and validation
 
-- Exercised against real jobs and invoices. I regenerate and read the PDFs after changes.
+- There is no automated test suite. I exercise it against real jobs and invoices and regenerate and read the PDFs after changes. That is a known gap.
 
 ## Problems encountered
 
-- A "blurry invoice" bug turned out to be a browser's built-in PDF renderer dropping letters, which led to the in-app viewer.
+- A "blurry invoice" bug turned out to be a browser's built-in PDF renderer dropping letters. I built an in-app viewer to avoid it, but a second app window leaked memory without limit (a platform bug, confirmed with a minimal reproduction). I removed the viewer and fixed the system default PDF handler instead.
 - A scheduling-service API once accepted connections and then never answered. A shared lock let that hang the whole app. Isolating the integration fixed it.
 
 ## Current status
 
-In daily use; expense reporting is the next area.
+In daily use. The long-term goal is for it to replace my remaining business tools. Accounting software has already been replaced.
 
 ## Lessons learned
 
-- Do not trust a system component for something that must be right every time.
+- Do not trust a system component for something that must be right every time, and be ready to back out a fix that causes a worse problem.
 - A slow dependency needs its own timeout and its own failure state.

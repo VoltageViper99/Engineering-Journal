@@ -25,13 +25,14 @@ Running a couple of dozen containers meant a pile of separate admin pages, remem
 ## Architecture
 
 - A Flask and SQLite web service running as a systemd service on the lab host.
-- One background poller per integration (Docker, system metrics, systemd, ZFS and SMART, UPS, weather, Cloudflare and others), each on its own schedule with its own error handling. A hung integration shows as a marked state and never blocks another poller or a page load.
+- One background poller per integration (Docker, system metrics, systemd, ZFS and SMART, UPS, weather, Cloudflare, a music server and others), each on its own schedule with its own error handling. A hung integration shows as a marked state and never blocks another poller or a page load.
 - The service reads Docker through the local socket, so there is no SSH hop or agent between display and server.
+- A Security page can scan the host and containers with Trivy and cross-reference known CVEs.
 - SQLite keeps metric history for charts. Pages are served from the database plus an in-memory latest snapshot.
 
 ## Technologies
 
-Python, Flask, SQLite, systemd, Docker Engine API, Cloudflare API, a PySide6 client, pytest.
+Python, Flask, SQLite, waitress, systemd, Docker Engine API, Cloudflare API, Trivy, a PySide6 client, pytest.
 
 ## My role
 
@@ -55,7 +56,7 @@ Python, Flask, SQLite, systemd, Docker Engine API, Cloudflare API, a PySide6 cli
 
 ## Testing and validation
 
-- A pytest suite exists in the project repo. I rely on day-to-day use against the real stack, and I check links and monitors after each service migration.
+- The project repo has a pytest suite. Beyond that I rely on day-to-day use against the real stack, and I check links and monitors after each service migration.
 
 ## Problems encountered
 
