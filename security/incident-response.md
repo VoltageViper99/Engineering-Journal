@@ -12,6 +12,8 @@ public: true
 featured: true
 ---
 
+[Back to security](README.md)
+
 A sanitised case study. It covers the approach and the lessons, not the operational details.
 
 ## Summary

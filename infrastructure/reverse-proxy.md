@@ -12,20 +12,26 @@ public: true
 featured: false
 ---
 
+[Back to infrastructure](README.md)
+
 This page describes the pattern, not the configuration.
 
 ## Pattern
 
-```text
-Client
-→ internal DNS
-→ Caddy
-→ internal service
+```mermaid
+flowchart LR
+  C[Client on LAN or Tailscale] --> D[Internal DNS<br/>wildcard record]
+  D --> P[Caddy reverse proxy]
+  P --> S1[Service A]
+  P --> S2[Service B]
+  T[Cloudflare Tunnel<br/>separate public path] -.-> S3[Public service]
 ```
+
+Each service shares a small private network with the proxy only. The public path through Cloudflare Tunnel does not pass through this proxy.
 
 ## How it works
 
-- The internal domain is `voltinfra.net`, with wildcard DNS for `*.voltinfra.net`.
+- A private internal domain has a wildcard DNS record that points clients at the proxy.
 - Caddy handles internal reverse proxying.
 - Services are intended to be reachable over LAN and Tailscale.
 - Public exposure through Cloudflare Tunnel is a separate path and is not part of this proxy.

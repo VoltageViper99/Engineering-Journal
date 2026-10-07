@@ -12,6 +12,8 @@ public: true
 featured: false
 ---
 
+[Back to infrastructure](README.md)
+
 This page describes the approach, not the exact monitors, alerts or thresholds.
 
 ## Purpose
