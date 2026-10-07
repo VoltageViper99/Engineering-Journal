@@ -1,6 +1,6 @@
 # Assets
 
-Screenshots and diagrams for the journal live here.
+Screenshots and diagrams for the journal live here. Current images: `control-centre-overview.png` (security panel blanked), `docker-maintenance.png` (cropped) and `invoicing-pipeline.png`. Originals are kept outside the repo.
 
 **Being in `assets/` does not make an image safe to publish.** Review every image by hand before committing it, and look for:
 

@@ -42,6 +42,10 @@ flowchart LR
 - **Releases:** installers are built in CI for Windows, macOS and Debian, signed, published to object storage and listed in a manifest. The app checks the manifest and verifies a SHA-256 digest before opening an installer.
 - **Visibility:** the [Control Centre](control-centre.md) shows the pipeline's health.
 
+The Control Centre's view of the pipeline (container health, the Cloudflare Worker and the tunnels):
+
+![Control Centre invoicing pipeline page showing healthy automation and licence database containers, one Cloudflare Worker and two healthy tunnels](../assets/screenshots/invoicing-pipeline.png)
+
 ## Technologies
 
 Python (Flask, SQLite), Cloudflare Pages, Workers, KV, R2 and Tunnel, Stripe, Documenso, Resend, Docker Compose, GitHub Actions, Inno Setup, code signing.
