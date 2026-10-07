@@ -30,6 +30,16 @@ Running a couple of dozen containers meant a pile of separate admin pages, remem
 - A Security page can scan the host and containers with Trivy and cross-reference known CVEs.
 - SQLite keeps metric history for charts. Pages are served from the database plus an in-memory latest snapshot.
 
+## Screenshots
+
+![Control Centre overview: weather, server health, containers, music, invoicing pipeline and recent activity](../assets/screenshots/control-centre-overview.png)
+
+*The overview page. The security panel is blanked out in this public copy.*
+
+![Docker maintenance page showing disk usage, unused images, build cache, stopped containers and unused networks](../assets/screenshots/docker-maintenance.png)
+
+*Docker maintenance. It reports what could be cleaned up but never deletes anything without review and a confirmation. Cropped to the summary panels.*
+
 ## Technologies
 
 Python, Flask, SQLite, waitress, systemd, Docker Engine API, Cloudflare API, Trivy, a PySide6 client, pytest.
