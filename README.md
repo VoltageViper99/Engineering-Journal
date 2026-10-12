@@ -56,6 +56,7 @@ This repository is where I write that work down: what I built or changed, why, w
 Only things evidenced in this repo.
 
 - **Linux / systems:** administration, systemd, SSH hardening, fail2ban, firewall rule review and cleanup, host and UPS monitoring.
+- **Linux desktop:** Fedora (dnf) and earlier Arch-based systems, KDE Plasma, GNOME and Hyprland, a documented rebuild order and a package list kept in step with the machine.
 - **Docker / containers:** Compose stacks as code, container networks for isolation, log rotation, scoped automatic updates with Watchtower, image and volume cleanup.
 - **Networking:** reverse proxying with Caddy, wildcard internal DNS, Tailscale, Cloudflare Tunnel, how Docker-published ports interact with the host firewall.
 - **Security:** attack-surface audit, authentication on admin tools, TLS, least-privilege accounts, secrets handling, incident response and key rotation.
@@ -70,6 +71,7 @@ Only things evidenced in this repo.
 
 Latest entries (full list in the [journal index](journal/README.md)):
 
+- 12/10/2026: [Finding a Linux desktop that works for me](journal/2026/2026-10-12-linux-desktop.md)
 - 12/10/2026: [The homelab so far, and a repeatable security audit](journal/2026/2026-10-12-homelab.md)
 - 12/10/2026: [Business websites, and a security fix that was not live](journal/2026/2026-10-12.md)
 - 10/10/2026: [Building a CD backup script in Python](journal/2026/2026-10-10.md)
