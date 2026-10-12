@@ -12,11 +12,11 @@ This repository is where I write that work down: what I built or changed, why, w
 
 ## If you only have 5 minutes, start here
 
-1. [Homelab overview](infrastructure/homelab.md): what runs, how it's laid out, and the principles behind it.
-2. [Internal reverse proxy](infrastructure/reverse-proxy.md): reaching services by name instead of by address and port.
-3. [Retiring Portainer and hardening network exposure](journal/2026/2026-10-04.md): a day of audit-then-harden work (SSH, firewall, logins, closing ports).
-4. [Signing key committed to version control](security/incident-response.md): an incident case study, from detection to rotation to prevention.
-5. [Control Centre](projects/control-centre.md): the internal dashboard that ties the lab together.
+1. [Control Centre](projects/control-centre.md): the dashboard I run the whole lab from, and the project I am proudest of.
+2. [Homelab overview](infrastructure/homelab.md): what runs, how it's laid out, and the principles behind it.
+3. [Internal reverse proxy](infrastructure/reverse-proxy.md): reaching services by name instead of by address and port.
+4. [Retiring Portainer and hardening network exposure](journal/2026/2026-10-04.md): a day of audit-then-harden work (SSH, firewall, logins, closing ports).
+5. [Signing key committed to version control](security/incident-response.md): an incident case study, from detection to rotation to prevention.
 6. Latest entry: see the [journal index](journal/README.md).
 
 ## What this repo contains
@@ -31,6 +31,10 @@ This repository is where I write that work down: what I built or changed, why, w
 
 ## Featured work
 
+**Control Centre.** The tool that makes a large Docker and server stack manageable. One dashboard shows every stack, host health, security and update status, and the invoicing pipeline, and lets me restart or upgrade a single container safely with protection levels, health checks and a one-time undo. It is the project I use most and have put the most thought into. The code was largely written with AI assistance. *What I did:* defined the problem, designed what it shows and what it may do, tested every change against the real lab, and run it daily. [Control Centre](projects/control-centre.md), [how it grew](journal/2026/2026-10-09.md).
+
+![Control Centre overview showing weather, server health, containers, music and the invoicing pipeline](assets/screenshots/control-centre-overview.png)
+
 **Homelab and reverse proxy.** One Docker host running Compose stacks defined in version control, with internal services reached by name through a private Caddy proxy over LAN and Tailscale. A few services are published through Cloudflare Tunnel instead of port forwards. *What I did:* designed the layout, deployed and migrated the services, and wrote the migration order and rollback steps. [Homelab](infrastructure/homelab.md), [Reverse proxy](infrastructure/reverse-proxy.md).
 
 **Security hardening and exposure audit.** Audited what the server really listens on, then moved SSH to key-only with fail2ban, narrowed firewall rules, put logins and TLS on admin tools, and closed direct ports. *What I did:* chose the method (repoint first, close second), tested every change from a fresh connection, and verified the apps still worked. [Journal, 04/10/2026](journal/2026/2026-10-04.md), [Hardening](security/hardening.md).
@@ -38,8 +42,6 @@ This repository is where I write that work down: what I built or changed, why, w
 **Incident response.** A private key reached a git repository through a backup folder. I contained it, rotated it, debugged two configuration failures and added a fail-closed secret-scanning hook. [Case study](security/incident-response.md).
 
 **Monitoring.** Uptime Kuma, Dozzle, a UPS dashboard and self-hosted ntfy notifications, kept in step with every service move. [Monitoring](infrastructure/monitoring.md).
-
-**Control Centre.** An internal dashboard for Docker stacks, host health and a music remote ([screenshots](projects/control-centre.md#screenshots)). The code was largely written with AI assistance; I wrote the requirements, chose the architecture and run it. [Control Centre](projects/control-centre.md).
 
 **Supporter Invoicing.** A live product with a public website and a purchase pipeline I built and run: signed agreement (self-hosted Documenso), Stripe payment, Cloudflare Worker licence issuing and CI-built signed installers. The code was largely AI-assisted; the pipeline design, deployment and testing are mine. [Supporter Invoicing](projects/supporter-invoicing.md).
 
@@ -66,6 +68,7 @@ Only things evidenced in this repo.
 Latest entries (full list in the [journal index](journal/README.md)):
 
 - 10/10/2026: [Building a CD backup script in Python](journal/2026/2026-10-10.md)
+- 09/10/2026: [Control Centre, from dashboard to operations hub](journal/2026/2026-10-09.md)
 - 04/10/2026: [Retiring Portainer and hardening network exposure](journal/2026/2026-10-04.md)
 - 03/10/2026: [Internal reverse proxy rollout](journal/2026/2026-10-03.md)
 - 29/09/2026: [Scoped automatic container updates](journal/2026/2026-09-29.md)
