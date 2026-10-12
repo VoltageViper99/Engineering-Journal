@@ -8,7 +8,7 @@ Dated engineering logs, newest first. Each entry covers what I worked on, what c
 
 | Date | Entry | Focus |
 | --- | --- | --- |
-| 12/10/2026 | [Finding a Linux desktop that works for me](2026/2026-10-12-linux-desktop.md) | Manjaro and Hyprland, then Fedora with GNOME, then Fedora with KDE, and why |
+| 12/10/2026 | [Finding a Linux desktop that works for me](2026/2026-10-12-linux-desktop.md) | Manjaro and Hyprland, then Fedora with GNOME, KDE and Xfce, a classic Windows 98 look, and designing for non-technical users |
 | 12/10/2026 | [The homelab so far, and a repeatable security audit](2026/2026-10-12-homelab.md) | July to October milestones, a Tailscale-only decision, a read-only audit checklist |
 | 12/10/2026 | [Business websites, and a security fix that was not live](2026/2026-10-12.md) | Three static sites on Cloudflare, contact-form hardening, a deploy that failed quietly |
 | 10/10/2026 | [Building a CD backup script in Python](2026/2026-10-10.md) | Python learning project, mounting over SSH with a narrow permission rule |

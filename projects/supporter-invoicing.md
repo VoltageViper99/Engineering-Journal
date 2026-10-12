@@ -48,6 +48,8 @@ The Control Centre's view of the pipeline (container health, the Cloudflare Work
 
 ## The app
 
+I designed the app to be simple enough for someone who is not into computers. The first user was my mum, who has had no trouble with it and, in her words, could not go back to doing invoices manually. The interface is deliberately plain and uncluttered, in the same classic style I use on my own desktop (see [Finding a Linux desktop that works for me](../journal/2026/2026-10-12-linux-desktop.md)). The code was written mostly with AI assistance; the requirements and design decisions are mine.
+
 The desktop app itself, shown with blank demo data: first-time setup, creating an invoice, the invoice preview with PDF and email options, and the earnings page.
 
 ![Supporter Invoicing first-time setup form for business and payment details](../assets/screenshots/invoicing-app-setup.png)

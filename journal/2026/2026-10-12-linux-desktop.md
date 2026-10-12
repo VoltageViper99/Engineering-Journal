@@ -8,7 +8,7 @@ tags:
   - KDE
   - Arch
   - Workflow
-summary: Why my daily-driver machine has moved from Manjaro with Hyprland, to Fedora with GNOME, to Fedora with KDE Plasma in under a year, and what each move taught me about working in a way that suits me.
+summary: Why my daily-driver machine has moved from Manjaro with Hyprland, to Fedora with GNOME, then KDE Plasma and now Xfce, and what each move taught me about working in a way that suits me, including why I like simple, classic interfaces.
 public: true
 featured: false
 ---
@@ -17,7 +17,7 @@ featured: false
 
 ## What I worked on
 
-Writing down the desktop changes on my daily-driver machine. It has gone through three setups in under a year, and I am not embarrassed about that. Choosing tools by trying them is how I learn, and each change taught me something about how I want to work. This covers the major moves, not every setting.
+Writing down the desktop changes on my daily-driver machine. It has gone through four setups in under a year, and I am not embarrassed about that. Choosing tools by trying them is how I learn, and each change taught me something about how I want to work. This covers the major moves, not every setting.
 
 ## What changed
 
@@ -25,7 +25,8 @@ Writing down the desktop changes on my daily-driver machine. It has gone through
 | --- | --- |
 | Manjaro (Arch-based) with the Hyprland tiling window manager | A fully keyboard-driven setup that I enjoyed. It ended because the system kept breaking, not because of Hyprland. |
 | Fedora with GNOME | The first stop after leaving Arch. It fixed the stability problem but did not suit me. |
-| Fedora with KDE Plasma | Where I have settled for now: Fedora's stability underneath, Plasma's flexibility on top. |
+| Fedora with KDE Plasma | Fedora's stability underneath, Plasma's flexibility on top. A good fit for a while. |
+| Fedora with Xfce | The current setup: a simple, traditional desktop that I have styled as classic Windows 98. |
 
 ### Away from Arch
 
@@ -39,9 +40,17 @@ I loved Hyprland. Everything was a keybinding and the setup was code I could rea
 
 GNOME was tidy but too opinionated. Making the desktop my own meant fighting extensions and its own ideas of how I should work. Plasma lets me change nearly everything through its own settings.
 
-### The look
+### Away from KDE, to Xfce
 
-I run a flat, square, Windows 98-style theme, with blur and animation turned off. There is no grand reason. I like things simple that just work, and a plain, predictable desktop gets out of the way.
+KDE Plasma was the setup I settled on in September, and it was a good one. The latest move is to Xfce on the same Fedora base. Xfce is a plain, traditional desktop with a panel, a menu and windows, which suits how I like to work. Nothing changes underneath: the same Fedora, dnf and Wayland-era Linux knowledge applies.
+
+### The look, and why
+
+I follow a classic Windows 98 look and feel, flat and square with no blur or animation, and I carry it into my applications as well as the desktop, so everything looks and behaves the same. I prefer it because it is simple and easy to use. I am not a fan of fancy, cluttered interfaces. Controls are where you expect them, nothing moves for the sake of it, and a screen shows what you need and no more.
+
+### Why this matters beyond my desktop
+
+My philosophy is that software should be easy for people who are not into computers as much as I am. The clearest example is [Supporter Invoicing](../../projects/supporter-invoicing.md). I designed it for my mum, who is not a technical user. She has had no problems using it, loves it and, in her words, could not go back to doing invoices manually. I use the same test for everything I build or set up: if a non-technical person cannot use it without help, the design is wrong.
 
 ### The tools around the desktop changed too
 
@@ -59,11 +68,13 @@ I run a flat, square, Windows 98-style theme, with blur and animation turned off
 
 - **Stability over the newest software** for the machine I earn a living on.
 - **Fewer pieces to maintain.** One integrated desktop beats a hand-assembled stack when the stack's upkeep competes with real work.
+- **Simple over fancy, in my desktop and in my software.** I choose plain, consistent interfaces, and I build for the least technical person who will use the tool.
 - **Keyboard-first where it helps, mouse where it is easier.** I no longer try to do everything from the keyboard.
 - **Try things, but write down the result.** I keep a private system manual and keep it honest by checking it against the live machine.
 
 ## What I learned
 
+- Simple is a feature. The best test of an interface is whether someone who does not enjoy computers can use it unaided.
 - Customisation has a running cost. A setup that needs constant tweaking is a hobby, not a work tool, and I should be honest about which one I want.
 - Admin skills carry over. Moving from pacman to dnf, and from a hand-built desktop to Plasma, was easy because the underlying Linux knowledge (systemd, packages, config files, Wayland basics) is the same.
 - Notes that are not checked against the machine drift, and a stale note is worse than none.
@@ -72,4 +83,4 @@ I run a flat, square, Windows 98-style theme, with blur and animation turned off
 ## Next steps
 
 - Keep the system manual in step with the machine after each change.
-- Stay on Fedora and KDE for now, and revisit only if something stops working.
+- Stay on Fedora with Xfce for now, and revisit only if something stops working.
