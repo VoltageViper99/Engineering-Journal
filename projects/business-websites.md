@@ -58,7 +58,7 @@ Cloudflare Pages and Pages Functions, Cloudflare Turnstile, Cloudflare KV (for r
 
 I run all three sites: the domains and DNS, the Cloudflare setup, the secrets, the deploys and the content. I decided what each site should say and offer, tested the forms and booking end to end, and handled the security and the fixes.
 
-The page code was largely written with AI assistance (Claude), and I am not presenting it as hand-written. Where I have not verified who wrote what, I have not claimed it.
+I built the first version of the FoxWhitty Photography site myself, in a single 13-hour stint in July: the pages, gallery, menu and contact form. The later redesign and interface changes there were done with AI assistance (Claude). The repair and product sites, and the contact-form hardening and purchase flow, were largely written with AI assistance, and I am not presenting that code as hand-written.
 
 ## Key decisions
 

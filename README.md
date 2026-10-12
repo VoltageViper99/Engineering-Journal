@@ -47,7 +47,7 @@ This repository is where I write that work down: what I built or changed, why, w
 
 **CD Backup Script.** A Python tool that copies old data discs to server storage, with dry runs, clean failure handling and an optional full-screen interface. This is the one project here where I wrote most of the core code myself, as a way to learn Python. [CD Backup Script](projects/cd-backup.md).
 
-**Business websites.** Three small business sites (my repair business, a photography business and the invoicing product site) deployed from Git to Cloudflare Pages, with a contact form hardened by Turnstile, rate limiting and a honeypot. The page code was largely AI-assisted; the setup, security and operation are mine. [Business websites](projects/business-websites.md), [the deploy that failed quietly](journal/2026/2026-10-12.md).
+**Business websites.** Three small business sites (my repair business, a photography business and the invoicing product site) deployed from Git to Cloudflare Pages, with a contact form hardened by Turnstile, rate limiting and a honeypot. I built the first version of the photography site myself; the later redesign and the other sites' code were largely AI-assisted. The setup, security and operation are mine. [Business websites](projects/business-websites.md), [the deploy that failed quietly](journal/2026/2026-10-12.md).
 
 **Other projects.** [VoltOS](projects/voltos.md), [VoltOps](projects/volt-ops.md), [Holocron Kiosk](projects/holocron-kiosk.md).
 
