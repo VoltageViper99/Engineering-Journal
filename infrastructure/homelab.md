@@ -40,6 +40,10 @@ flowchart TB
   S -.-> T[Cloudflare Tunnel<br/>selected public services]
 ```
 
+## How it grew
+
+The lab has been in Git since July. The major steps: network-wide DNS filtering first, then media and file-sync stacks, a business database and the invoicing services in September, opt-in updates, the private reverse proxy and a security audit in early October. Removing redundant tools has been as much a part of it as adding new ones. The full story, with the decisions, is in the [journal entry on the homelab so far](../journal/2026/2026-10-12-homelab.md).
+
 ## My role
 
 I designed the layout and the principles below, deployed and migrated the services, and operate the lab day to day. I audit and harden it, and I write up each change. Some configuration and helper tooling was drafted with AI assistance. I review, test and own what runs.
@@ -78,10 +82,10 @@ I designed the layout and the principles below, deployed and migrated the servic
 
 ## Current direction
 
-- Keep moving the remaining services behind the internal reverse proxy, one at a time. The media stack is done.
+- Keep moving the remaining services behind the internal reverse proxy, one at a time. The media stack, Immich and Nextcloud are done.
 - Narrow host-port exposure where it is safe to do so, after checking what depends on each port.
 - Add the remaining media tooling.
 - Keep monitoring aligned with the new service names.
 - Continue cleanup and hardening.
 
-See the [journal](../journal/2026/) for dated changes.
+See the [journal](../journal/README.md) for dated changes.

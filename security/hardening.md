@@ -23,6 +23,10 @@ Approach and controls only. Exact rules, addresses and port lists are not publis
 3. **Login, then TLS, then close the port.** Verify each step before the next.
 4. **Test every change from a fresh connection.** For SSH, prove key login works and keep a second session open. Add a narrow rule before deleting a wide one.
 
+## Repeatable audit
+
+The audit is a read-only checklist kept in the infrastructure repository, with expected results and a dated log. It covers SSH settings, listening ports, firewall and Docker policy, secrets not in Git, pending updates, a port scan from another machine and a manual review of account and cloud settings. A re-scan after the first run found two data-viewer pages still open on the home network: their compose files were correct but the containers had not been recreated. See the [journal entry](../journal/2026/2026-10-12-homelab.md).
+
 ## Controls in place
 
 - SSH is key-only, root login is refused, attempts per connection are limited and fail2ban watches it. It is reachable from the home network and over Tailscale only.
@@ -36,6 +40,7 @@ Approach and controls only. Exact rules, addresses and port lists are not publis
 ## Known gaps
 
 - Monitoring runs on the host it watches.
+- Several containers use `:latest` tags and some run as root. They are recorded in the audit and not yet fixed.
 - Hardening is ongoing, not a finished state.
 
 ## Evidence

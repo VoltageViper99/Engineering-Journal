@@ -8,6 +8,7 @@ Dated engineering logs, newest first. Each entry covers what I worked on, what c
 
 | Date | Entry | Focus |
 | --- | --- | --- |
+| 12/10/2026 | [The homelab so far, and a repeatable security audit](2026/2026-10-12-homelab.md) | July to October milestones, a Tailscale-only decision, a read-only audit checklist |
 | 12/10/2026 | [Business websites, and a security fix that was not live](2026/2026-10-12.md) | Three static sites on Cloudflare, contact-form hardening, a deploy that failed quietly |
 | 10/10/2026 | [Building a CD backup script in Python](2026/2026-10-10.md) | Python learning project, mounting over SSH with a narrow permission rule |
 | 09/10/2026 | [Control Centre, from dashboard to operations hub](2026/2026-10-09.md) | The tool I run the lab from: safe actions, security status, hardening |

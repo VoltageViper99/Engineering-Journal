@@ -66,7 +66,7 @@ Python (Flask, SQLite), Cloudflare Pages, Workers, KV, R2 and Tunnel, Stripe, Do
 
 - Defined the product, the purchase flow and the order of steps (agreement, then payment, then licence).
 - Chose and connected the services, and deployed the website, Worker and homelab services.
-- Set up the secrets handling and the tunnel exposure, and tried out failing the automation service over to a second machine as a test.
+- Set up the secrets handling and the tunnel exposure.
 - Tested the whole purchase flow end to end, debugged failures and documented the setup.
 - **AI-assisted development:** the application and service code was written mostly with Claude. I specified it, tested it and run it.
 
