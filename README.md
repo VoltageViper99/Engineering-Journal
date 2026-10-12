@@ -47,6 +47,8 @@ This repository is where I write that work down: what I built or changed, why, w
 
 **CD Backup Script.** A Python tool that copies old data discs to server storage, with dry runs, clean failure handling and an optional full-screen interface. This is the one project here where I wrote most of the core code myself, as a way to learn Python. [CD Backup Script](projects/cd-backup.md).
 
+**Business websites.** Three small business sites (my repair business, a photography business and the invoicing product site) deployed from Git to Cloudflare Pages, with a contact form hardened by Turnstile, rate limiting and a honeypot. The page code was largely AI-assisted; the setup, security and operation are mine. [Business websites](projects/business-websites.md), [the deploy that failed quietly](journal/2026/2026-10-12.md).
+
 **Other projects.** [VoltOS](projects/voltos.md), [VoltOps](projects/volt-ops.md), [Holocron Kiosk](projects/holocron-kiosk.md).
 
 ## Skills demonstrated
@@ -59,6 +61,7 @@ Only things evidenced in this repo.
 - **Security:** attack-surface audit, authentication on admin tools, TLS, least-privilege accounts, secrets handling, incident response and key rotation.
 - **Monitoring:** Uptime Kuma, Dozzle, ntfy, noise reduction, monitoring as part of change management.
 - **Python scripting:** a command-line tool with batch handling, error clean-up and a tested permission rule, written mostly by me as a learning project.
+- **Web hosting and deployment:** static sites on Cloudflare Pages deployed from Git, Pages Functions, Turnstile, KV rate limiting, DNS and email-domain verification.
 - **Automation:** opt-in update policy, pre-commit secret scanning, README-driven rebuildable setups.
 - **Git and documentation:** version-controlled infrastructure, sanitised public write-ups, structured journal entries.
 - **AI-assisted workflow:** specifying requirements, reviewing and testing AI-generated changes, and keeping responsibility for what runs.
@@ -67,6 +70,7 @@ Only things evidenced in this repo.
 
 Latest entries (full list in the [journal index](journal/README.md)):
 
+- 12/10/2026: [Business websites, and a security fix that was not live](journal/2026/2026-10-12.md)
 - 10/10/2026: [Building a CD backup script in Python](journal/2026/2026-10-10.md)
 - 09/10/2026: [Control Centre, from dashboard to operations hub](journal/2026/2026-10-09.md)
 - 04/10/2026: [Retiring Portainer and hardening network exposure](journal/2026/2026-10-04.md)
