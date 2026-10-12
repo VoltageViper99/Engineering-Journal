@@ -8,7 +8,7 @@ I'm TJ, a self-employed IT technician running [Voltage PC Repairs](https://volta
 
 This repository is where I write that work down: what I built or changed, why, what broke and what I learned. Sensitive details (addresses, credentials, customer information, exact firewall and port layouts) are deliberately left out. See the [publication guide](PUBLICATION-GUIDE.md).
 
-**How I work.** Some project code and tooling were developed with AI-assisted coding tools (Claude). I'm responsible for requirements, architecture, deployment, testing, validation, security decisions and ongoing operation. I'm not presenting myself as a software developer. The strength of this repo is the systems work around the code.
+**How I work.** Some project code and tooling were developed with AI-assisted coding tools (Claude). I'm responsible for requirements, architecture, deployment, testing, validation, security decisions and ongoing operation. I'm not presenting myself as a software developer, though one small project, the [CD backup script](projects/cd-backup.md), is mostly my own Python. The strength of this repo is the systems work around the code.
 
 ## If you only have 5 minutes, start here
 
@@ -43,6 +43,8 @@ This repository is where I write that work down: what I built or changed, why, w
 
 **Supporter Invoicing.** A live product with a public website and a purchase pipeline I built and run: signed agreement (self-hosted Documenso), Stripe payment, Cloudflare Worker licence issuing and CI-built signed installers. The code was largely AI-assisted; the pipeline design, deployment and testing are mine. [Supporter Invoicing](projects/supporter-invoicing.md).
 
+**CD Backup Script.** A Python tool that copies old data discs to server storage, with dry runs, clean failure handling and an optional full-screen interface. This is the one project here where I wrote most of the core code myself, as a way to learn Python. [CD Backup Script](projects/cd-backup.md).
+
 **Other projects.** [VoltOS](projects/voltos.md), [VoltOps](projects/volt-ops.md), [Holocron Kiosk](projects/holocron-kiosk.md).
 
 ## Skills demonstrated
@@ -54,6 +56,7 @@ Only things evidenced in this repo.
 - **Networking:** reverse proxying with Caddy, wildcard internal DNS, Tailscale, Cloudflare Tunnel, how Docker-published ports interact with the host firewall.
 - **Security:** attack-surface audit, authentication on admin tools, TLS, least-privilege accounts, secrets handling, incident response and key rotation.
 - **Monitoring:** Uptime Kuma, Dozzle, ntfy, noise reduction, monitoring as part of change management.
+- **Python scripting:** a command-line tool with batch handling, error clean-up and a tested permission rule, written mostly by me as a learning project.
 - **Automation:** opt-in update policy, pre-commit secret scanning, README-driven rebuildable setups.
 - **Git and documentation:** version-controlled infrastructure, sanitised public write-ups, structured journal entries.
 - **AI-assisted workflow:** specifying requirements, reviewing and testing AI-generated changes, and keeping responsibility for what runs.
@@ -62,6 +65,7 @@ Only things evidenced in this repo.
 
 Latest entries (full list in the [journal index](journal/README.md)):
 
+- 10/10/2026: [Building a CD backup script in Python](journal/2026/2026-10-10.md)
 - 04/10/2026: [Retiring Portainer and hardening network exposure](journal/2026/2026-10-04.md)
 - 03/10/2026: [Internal reverse proxy rollout](journal/2026/2026-10-03.md)
 - 29/09/2026: [Scoped automatic container updates](journal/2026/2026-09-29.md)
