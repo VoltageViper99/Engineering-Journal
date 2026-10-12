@@ -25,8 +25,8 @@ Writing down the desktop changes on my daily-driver machine. It has gone through
 | --- | --- |
 | Manjaro (Arch-based) with the Hyprland tiling window manager | A fully keyboard-driven setup that I enjoyed. It ended because the system kept breaking, not because of Hyprland. |
 | Fedora with GNOME | The first stop after leaving Arch. It fixed the stability problem but did not suit me. |
-| Fedora with KDE Plasma | Fedora's stability underneath, Plasma's flexibility on top. A good fit for a while. |
-| Fedora with Xfce | The current setup: a simple, traditional desktop that I have styled as classic Windows 98. |
+| Fedora with KDE Plasma | Fedora's stability underneath, Plasma's flexibility on top. Too heavy for me, and too much effort to theme. |
+| Fedora with Xfce | The current setup: a lightweight, traditional desktop with a classic start menu, styled as classic Windows 98. |
 
 ### Away from Arch
 
@@ -42,7 +42,9 @@ GNOME was tidy but too opinionated. Making the desktop my own meant fighting ext
 
 ### Away from KDE, to Xfce
 
-KDE Plasma was the setup I settled on in September, and it was a good one. The latest move is to Xfce on the same Fedora base. Xfce is a plain, traditional desktop with a panel, a menu and windows, which suits how I like to work. Nothing changes underneath: the same Fedora, dnf and Wayland-era Linux knowledge applies.
+KDE Plasma was the setup I settled on in September, and it is a good desktop. But it was too heavy for me, and getting it to look and feel like Windows 98 took more effort than it should have. The settings are a good example. KDE gives you a huge number of options, which is great if you want them, but I do not. Xfce has a classic start menu, so finding an application is simple, and its settings are plain and easy to find. It is lightweight and it just works.
+
+The move was to Xfce on the same Fedora base, so nothing changes underneath: the same Fedora and dnf knowledge applies.
 
 ### The look, and why
 
@@ -67,6 +69,7 @@ My philosophy is that software should be easy for people who are not into comput
 ## Decisions
 
 - **Stability over the newest software** for the machine I earn a living on.
+- **Pick the desktop that already looks and works the way I want**, instead of bending a powerful one into shape. Theming KDE to look like Windows 98 cost more effort than choosing Xfce.
 - **Fewer pieces to maintain.** One integrated desktop beats a hand-assembled stack when the stack's upkeep competes with real work.
 - **Simple over fancy, in my desktop and in my software.** I choose plain, consistent interfaces, and I build for the least technical person who will use the tool.
 - **Keyboard-first where it helps, mouse where it is easier.** I no longer try to do everything from the keyboard.
