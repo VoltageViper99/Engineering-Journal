@@ -70,6 +70,7 @@ Only things evidenced in this repo.
 
 Latest entries (full list in the [journal index](journal/README.md)):
 
+- 12/10/2026: [The homelab so far, and a repeatable security audit](journal/2026/2026-10-12-homelab.md)
 - 12/10/2026: [Business websites, and a security fix that was not live](journal/2026/2026-10-12.md)
 - 10/10/2026: [Building a CD backup script in Python](journal/2026/2026-10-10.md)
 - 09/10/2026: [Control Centre, from dashboard to operations hub](journal/2026/2026-10-09.md)
