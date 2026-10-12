@@ -47,7 +47,7 @@ I run a flat, square, Windows 98-style theme, with blur and animation turned off
 
 - **Browser:** I tried a keyboard-only browser. The deal-breaker was no extension support, so I had no ad blocker and no password-manager autofill. Firefox came back.
 - **Mail:** I ran a terminal mail stack (a mail client, a sync tool, search and a calendar tool, with credentials in an encrypted store). I picked it for stability, fast search and a keyboard-only workflow. But it needed ongoing care, such as a sync timer that could not unlock credentials until I logged in. Thunderbird replaced it, with its own calendar.
-- **Other apps:** a PDF viewer and file manager were swapped for ones that fit better. The terminal (kitty) and my Neovim configuration survived every move, because they did not depend on the desktop.
+- **Other apps:** a PDF viewer and file manager were swapped for ones that fit better. The terminal (kitty) survived every move, because it does not depend on the desktop.
 
 ## Problems / debugging
 
