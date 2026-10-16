@@ -35,7 +35,7 @@ The audit is a read-only checklist kept in the infrastructure repository, with e
 - Notification access uses limited accounts with deny-by-default.
 - Secrets live in git-ignored files, and a fail-closed pre-commit scanner blocks likely secrets.
 - Public services use outbound Cloudflare Tunnels rather than port forwards.
-- Trivy scans the host and running containers for known vulnerabilities, with results on the Control Centre's Security page. Low-risk containers update automatically, and the rest are updated by hand after checking.
+- The Control Centre shows pending operating system security updates and reboot-required status. I tried Trivy vulnerability scanning on the host and containers and removed it on 12/10/2026. Low-risk containers update automatically, and the rest are updated by hand after checking.
 
 ## Known gaps
 

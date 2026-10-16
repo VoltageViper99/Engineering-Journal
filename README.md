@@ -71,6 +71,7 @@ Only things evidenced in this repo.
 
 Latest entries (full list in the [journal index](journal/README.md)):
 
+- 15/10/2026: [VoltOps, texted receipts and an audit pass](journal/2026/2026-10-15.md)
 - 12/10/2026: [Finding a Linux desktop that works for me](journal/2026/2026-10-12-linux-desktop.md)
 - 12/10/2026: [The homelab so far, and a repeatable security audit](journal/2026/2026-10-12-homelab.md)
 - 12/10/2026: [Business websites, and a security fix that was not live](journal/2026/2026-10-12.md)

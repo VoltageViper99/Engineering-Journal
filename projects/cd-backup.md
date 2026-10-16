@@ -81,6 +81,13 @@ Python 3 (standard library for the core), the Linux tools `lsblk`, `udisksctl` a
 - **Half-finished copies.** A failed copy could leave a partial folder behind, which then forced the next try onto a numbered name. Removing it on failure fixed that.
 - **Linux discs.** Root-only files and broken shortcuts would otherwise fail a whole disc, which led to the skip-and-record approach.
 
+## Related tools
+
+Two small tools sit next to it in the same scripts repository, both written as practice in the same style:
+
+- **Backup organiser.** Once the discs are copied, the backup is one flat folder of disc folders. This tool scans them, suggests what each one is, lets me choose a category and name in a full-screen interface, and then files them into sorted folders. It shows the plan first, only moves things when I confirm, never deletes my files, and writes a log so a move can be undone. It has automated tests that run on throwaway fake folders, and I have so far used it on copies only.
+- **File organiser.** A smaller exercise that sorts the files in a folder into sub-folders by type. It has a dry run that only reports counts, skips duplicates, and reads its file-type list from a JSON file. I built it up over 14/10 in small steps, starting with a report-only version.
+
 ## Current status
 
 Working, and tested end to end with a real disc. Not done yet: a free-space check, checking the destination is writable before mounting, verifying the copy (file count and size against the disc) and tidying odd characters out of disc labels.

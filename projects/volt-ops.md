@@ -28,10 +28,13 @@ I was tracking jobs and finances with a mix of tools. I wanted one local app tha
 - Online bookings from a scheduling service arrive through a Cloudflare Worker that queues events for the app to pull, so the app needs no public address.
 - Automatic daily database backups, mirrored to a synced folder so they do not live only on the same disk.
 - Packaged as an RPM with a normal launcher entry, installed next to a separate development checkout.
+- A second, keyboard-driven terminal interface runs over SSH on the same code and data, for when I am not at the desktop.
+- Receipts and invoices can be texted to customers. The PDF is uploaded to the business website and served at an unguessable link that expires after 30 days and can be revoked, and every text is logged.
+- A receipt watcher reads photos of receipts with a local vision model and offers the result as a suggestion that I confirm before it becomes an expense. It is local-only on purpose, for privacy and cost.
 
 ## Technologies
 
-Python, pywebview, SQLite, Cloudflare Workers, RPM packaging.
+Python, pywebview, Textual, SQLite, Cloudflare Workers and Pages, an SMS service, RPM packaging.
 
 ## My role
 
@@ -49,12 +52,17 @@ Python, pywebview, SQLite, Cloudflare Workers, RPM packaging.
 
 ## Security considerations
 
-- Customer data stays local. Secrets live in `.env` files kept out of version control.
+- Customer data stays local. Secrets live in `.env` files kept out of version control, are masked in the interface and the files are owner-only.
+- Texted links are long and unguessable, expire after 30 days and can be revoked early.
+- The app refuses overpayments, voids issued invoices and receipts instead of deleting them, and never reuses a document number.
+- The window has a content security policy, and only one copy can run against a data folder.
+- A browser version served behind my private proxy was built and then retired on 15/10, so the app runs on the desktop only.
 - Limitation: there is one user and no network login, which is acceptable for a single-machine app.
 
 ## Testing and validation
 
-- There is no automated test suite. I exercise it against real jobs and invoices and regenerate and read the PDFs after changes. That is a known gap.
+- An automated test suite was added in the 15/10 audit pass: about a hundred backend checks, plus interface checks in a headless browser and against the real window. A run of the suite, and a rehearsed restore of a backup, were part of that pass.
+- I still exercise changes against real jobs and invoices and read the generated PDFs, because that is where the earlier bugs showed up.
 
 ## Problems encountered
 
@@ -63,9 +71,10 @@ Python, pywebview, SQLite, Cloudflare Workers, RPM packaging.
 
 ## Current status
 
-In daily use. The long-term goal is for it to replace my remaining business tools. Accounting software has already been replaced.
+In daily use, with the most active development in October 2026. See [VoltOps, texted receipts and an audit pass](../journal/2026/2026-10-15.md). The long-term goal is for it to replace my remaining business tools. Accounting software has already been replaced.
 
 ## Lessons learned
 
+- Anything that sends a message to a customer needs a way to take it back, and a record of exactly what was sent.
 - Do not trust a system component for something that must be right every time, and be ready to back out a fix that causes a worse problem.
 - A slow dependency needs its own timeout and its own failure state.
