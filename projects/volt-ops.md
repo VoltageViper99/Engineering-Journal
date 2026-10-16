@@ -7,7 +7,7 @@ tags:
   - Python
   - Business tooling
   - Packaging
-summary: A desktop app that runs my repair business end to end: jobs, invoices, payments, expenses and reporting, installed as a normal RPM.
+summary: "A desktop app that runs my repair business end to end: jobs, invoices, payments, expenses and reporting, installed as a normal RPM."
 public: true
 featured: false
 ---
