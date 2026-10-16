@@ -8,6 +8,7 @@ Dated engineering logs, newest first. Each entry covers what I worked on, what c
 
 | Date | Entry | Focus |
 | --- | --- | --- |
+| 15/10/2026 | [VoltOps, texted receipts and an audit pass](2026/2026-10-15.md) | Receipts by text with expiring links, a terminal front end, a retired browser experiment, backups and the first tests |
 | 12/10/2026 | [Finding a Linux desktop that works for me](2026/2026-10-12-linux-desktop.md) | Manjaro and Hyprland, then Fedora with GNOME, KDE and Xfce, a classic Windows 98 look, and designing for non-technical users |
 | 12/10/2026 | [The homelab so far, and a repeatable security audit](2026/2026-10-12-homelab.md) | July to October milestones, a Tailscale-only decision, a read-only audit checklist |
 | 12/10/2026 | [Business websites, and a security fix that was not live](2026/2026-10-12.md) | Three static sites on Cloudflare, contact-form hardening, a deploy that failed quietly |

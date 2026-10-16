@@ -36,7 +36,7 @@ Know when a service is down or misbehaving before I rely on it, and confirm that
 - **A UPS dashboard** for power status.
 - **ntfy**, self-hosted, for push notifications. Watchtower and Uptime Kuma publish to it as limited accounts, and my phone subscribes over https. It denies everything by default and is reached only through the private proxy.
 - **Control Centre** as the internal starting point for reaching services (see [Control Centre](../projects/control-centre.md)).
-- **Trivy**, scanning the host and running containers for known vulnerabilities. Results appear on the Control Centre's Security page (see [Control Centre](../projects/control-centre.md)).
+- **Update status** for the host (pending security updates and reboot-required) on the Control Centre's Updates page (see [Control Centre](../projects/control-centre.md)). Trivy vulnerability scanning ran for a while and was removed on 12/10/2026.
 - **Log rotation** on chatty containers, so a runaway error loop cannot fill the disk. Watchtower's logs are capped for this reason.
 
 ## How monitoring fits change management
@@ -62,4 +62,4 @@ Update policy follows the same idea. Low-risk services update automatically and 
 ## Current direction
 
 - Keep monitors and links in step with each service move. The media monitors already use container names, because the proxy only answers LAN and Tailscale sources and a monitor inside a container cannot use the proxied names.
-- Keep acting on what the vulnerability scans find. Trivy scanning of the host and running containers is in place and reported on the Control Centre's Security page.
+- Decide whether vulnerability scanning needs to come back in some form, since the Trivy version was removed.

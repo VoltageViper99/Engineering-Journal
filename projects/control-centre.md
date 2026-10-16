@@ -29,7 +29,7 @@ A couple of dozen containers across many stacks meant a pile of separate admin p
 - **Overview:** one status-first page with an overall verdict, then cards for server health, security, storage, containers, music and the invoicing pipeline, followed by "Needs attention" and recent activity. Each card shows Healthy, Warning, Critical or Unknown as text plus a symbol, never colour alone, and a missing source shows "Unknown" instead of breaking the page.
 - **Automatic grouping:** containers are grouped by their Compose project label, so there is no service list to maintain as stacks change.
 - **Containers and system:** logs and history charts per container, and CPU, memory, disk, network, temperature, UPS, storage health and systemd status for the host.
-- **Security:** Trivy scans of the running containers and the host, plus pending operating system updates and reboot-required status, rolled into one verdict.
+- **Updates:** pending operating system security updates and reboot-required status, shown as an amber warning (never critical) on the overview. The page used to be a Security page built around vulnerability scans; see the limitations below.
 - **Actions:** start, stop and restart a single container, and upgrade one with a check that it came back healthy and a one-time undo. Both are opt-in and limited by protection levels.
 - **Docker maintenance:** shows unused images, build cache, stopped containers and networks, and never deletes anything without review and confirmation.
 - **Cloudflare operations:** Worker analytics and tunnel status for the invoicing pipeline.
@@ -40,7 +40,7 @@ A couple of dozen containers across many stacks meant a pile of separate admin p
 - A Flask and SQLite web service running as a systemd service on the lab host.
 - One background poller per integration (Docker, system metrics, systemd, ZFS and SMART, UPS, weather, Cloudflare, a music server and others), each on its own schedule with its own error handling. A hung integration shows as a marked state and never blocks another poller or a page load.
 - The service reads Docker through the local socket, so there is no SSH hop or agent between display and server.
-- A Security page can scan the host and containers with Trivy and cross-reference known CVEs.
+- Vulnerability scanning was built (Trivy, with known-CVE lookups) and then removed on 12/10/2026. The page now reports only pending updates and reboots.
 - SQLite keeps metric history for charts. Pages are served from the database plus an in-memory latest snapshot.
 
 ## Screenshots
@@ -70,7 +70,7 @@ See the [journal entry](../journal/2026/2026-10-09.md) for the story behind thes
 
 ## Technologies
 
-Python, Flask, SQLite, waitress, systemd, Docker Engine API, Cloudflare API, Trivy, a PySide6 client, pytest.
+Python, Flask, SQLite, waitress, systemd, Docker Engine API, Cloudflare API, a PySide6 client, pytest.
 
 ## My role
 
