@@ -15,6 +15,11 @@ featured: false
 
 [Back to journal index](../README.md)
 
+> [!NOTE]
+> **In short:** My own computer has changed its whole look and setup four times in under a year, and this is why. Each time I moved towards something simpler, and I have landed on a plain, classic Windows 98 style. The same idea runs through everything I build: if a person who is not into computers cannot use it without help, the design is wrong.
+
+New to some of the terms? The [glossary](../../GLOSSARY.md) explains them in plain English.
+
 ## What I worked on
 
 Writing down the desktop changes on my daily-driver machine. It has gone through four setups in under a year, and I am not embarrassed about that. Choosing tools by trying them is how I learn, and each change taught me something about how I want to work. This covers the major moves, not every setting.

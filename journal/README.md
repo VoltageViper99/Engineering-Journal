@@ -2,7 +2,7 @@
 
 [Back to main README](../README.md)
 
-Dated engineering logs, newest first. Each entry covers what I worked on, what changed, what went wrong, the decisions behind it and what I learned.
+Dated engineering logs, newest first. Each entry covers what I worked on, what changed, what went wrong, the decisions behind it and what I learned. Each one opens with an "In short" summary in plain English, and the [glossary](../GLOSSARY.md) explains the technical terms.
 
 ## 2026
 
