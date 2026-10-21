@@ -10,6 +10,8 @@ This repository is where I write that work down: what I built or changed, why, w
 
 **How I work.** Some project code and tooling were developed with AI-assisted coding tools (Claude). I'm responsible for requirements, architecture, deployment, testing, validation, security decisions and ongoing operation. I'm not presenting myself as a software developer, though one small project, the [CD backup script](projects/cd-backup.md), is mostly my own Python. I prefer plain, simple interfaces, and I build and set things up so that people who are not into computers can use them. The strength of this repo is the systems work around the code.
 
+**Not a tech person?** Every journal entry opens with an "In short" box in plain English, and the [glossary](GLOSSARY.md) explains the technical words.
+
 ## If you only have 5 minutes, start here
 
 1. [Control Centre](projects/control-centre.md): the dashboard I run the whole lab from, and the project I am proudest of.
@@ -28,6 +30,7 @@ This repository is where I write that work down: what I built or changed, why, w
 | [`infrastructure/`](infrastructure/README.md) | Architecture and platform notes: homelab, Docker, reverse proxy, monitoring |
 | [`security/`](security/README.md) | Hardening notes and incident write-ups |
 | [`repairs/`](repairs/README.md) | Hardware repair and diagnostic case studies (planned) |
+| [`GLOSSARY.md`](GLOSSARY.md) | Plain-English explanations of the technical terms |
 
 ## Featured work
 

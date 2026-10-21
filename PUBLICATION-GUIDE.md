@@ -69,6 +69,39 @@ Also enable GitHub secret scanning and push protection on the remote (Settings â
 
 If a secret is ever committed, rotate it first. Removing it from history is secondary, because it must be treated as compromised.
 
+## Voice and plain language
+
+The journal is read by technical people and by people who are not into computers. Write for both.
+
+**Voice.** Like a tradie explaining the job to a curious customer: first person, confident, friendly and honest about what went wrong. Short sentences and Australian spelling.
+
+| Do | Avoid |
+| --- | --- |
+| Say why it mattered: "I use this every night, so it had to work on the tablet." | Hype words: "amazing", "game-changer", "blazingly fast" |
+| Name a feeling once in a while: "This one annoyed me for a day." | Jokes, memes or emoji that will date badly |
+| Use an everyday comparison for a hard idea | Sarcasm, or blaming tools |
+| Keep the honesty: "I do not know which fix worked." | Over-claiming: "I built" when Claude wrote the code |
+| Open a problem with the symptom, then the cause | Long technical paragraphs before the reader knows why it matters |
+
+Professional line: a hiring manager should be able to read any paragraph aloud in an interview without me wincing.
+
+**Every entry has an "In short" box** straight after the "Back to journal index" link: three or four sentences with no jargon at all, saying what I did, why, and what is better now. Follow it with the glossary line:
+
+```markdown
+> [!NOTE]
+> **In short:** Three or four plain sentences.
+
+New to some of the terms? The [glossary](../../GLOSSARY.md) explains them in plain English.
+```
+
+**Explain a term the first time it appears** in an entry, in a few words inside the sentence: "17 pull requests (proposed changes I review and approve before they go in)". Later mentions stay short. Terms that keep coming up belong in [`GLOSSARY.md`](GLOSSARY.md), in plain words, one or two sentences each.
+
+**Tell the best problem as a story.** For the one or two problems per entry worth it: the symptom as the heading, what it was like, the cause in plain words, then the fix in short labelled steps. Smaller problems stay as short bullets.
+
+**Keep the tables and the detail.** The "In short" box is the way in for non-technical readers; the rest of the entry stays useful for technical ones.
+
+The publication rules above still apply to every word, including jokes and asides: no hostnames, addresses or port numbers.
+
 ## Front matter
 
 ```yaml

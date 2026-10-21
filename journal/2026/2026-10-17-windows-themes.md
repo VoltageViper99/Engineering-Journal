@@ -15,6 +15,11 @@ featured: false
 
 [Back to journal index](../README.md)
 
+> [!NOTE]
+> **In short:** My Linux computer already looked like Windows 98. I added Windows XP and Windows 7 looks that I can switch between with one command, and stored them all in one place so a new computer can be set up the same way. The old Start menu could not be made to look like Windows 7, so there is now a new one written in Python.
+
+New to some of the terms? The [glossary](../../GLOSSARY.md) explains them in plain English.
+
 ## What I worked on
 
 Extending the classic Windows look on my Xfce desktop (see [Finding a Linux desktop that works for me](2026-10-12-linux-desktop.md)). The Windows 98 setup stays, and I added Windows XP (Luna) and Windows 7 (Aero) looks that I can switch between with one command. The goal is that the machine looks and feels like Windows, so it is familiar and plain to use.
