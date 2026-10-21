@@ -8,6 +8,8 @@ Dated engineering logs, newest first. Each entry covers what I worked on, what c
 
 | Date | Entry | Focus |
 | --- | --- | --- |
+| 21/10/2026 | [Turning my music app into a Windows Media Player](2026/2026-10-21.md) | A phased rebuild in 17 small pull requests: skins per theme, tablet fixes, editable playlists, a radio manager, settings and a choice of speaker |
+| 20/10/2026 | [Dashboard themes, a local AI for playlists and a rebuilt download stack](2026/2026-10-20.md) | Eight Windows-era themes, a terminal music remote, a local AI helper that can only suggest, a VPN-backed download client |
 | 17/10/2026 | [Windows XP and 7 themes, and a Start menu built from scratch](2026/2026-10-17-windows-themes.md) | Switchable XP, Windows 7 and Windows 98 looks, a theme repo, a Python Start menu instead of a panel plugin |
 | 15/10/2026 | [VoltOps, texted receipts and an audit pass](2026/2026-10-15.md) | Receipts by text with expiring links, a terminal front end, a retired browser experiment, backups and the first tests |
 | 12/10/2026 | [Finding a Linux desktop that works for me](2026/2026-10-12-linux-desktop.md) | Manjaro and Hyprland, then Fedora with GNOME, KDE and Xfce, a classic Windows 98 look, and designing for non-technical users |

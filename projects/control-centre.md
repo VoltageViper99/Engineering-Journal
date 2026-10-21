@@ -65,8 +65,10 @@ The major steps, newest last. Dates are from the project history.
 - **05/10/2026:** music grew smart playlists and automatic loudness levelling. It now runs as its own app.
 - **06/10/2026:** the big consolidation day. The overview became an operations hub, and the Security, Cloudflare and Docker maintenance pages arrived. CSRF protection was added to every state-changing request.
 - **07/10/2026 onwards:** a Settings page, session handling consolidated, dead code removed and duplicated helpers merged, Bluetooth auto-reconnect for the kiosk, CPU temperature and security status improvements.
+- **17/10/2026 to 20/10/2026:** a theme picker with eight Windows-era looks, a terminal remote for the music app and a local AI helper for Smart Playlists. See the [journal entry](../journal/2026/2026-10-20.md).
+- **21/10/2026:** the music app became a Windows Media Player style player, with editable playlists, a radio station manager, a settings page and a choice of speaker, including the browser in my hand. The kiosk's automatic Bluetooth reconnect was removed in favour of picking the speaker in Settings. See the [journal entry](../journal/2026/2026-10-21.md).
 
-See the [journal entry](../journal/2026/2026-10-09.md) for the story behind these.
+See the [journal entry](../journal/2026/2026-10-09.md) for the story behind the earlier steps.
 
 ## Technologies
 
