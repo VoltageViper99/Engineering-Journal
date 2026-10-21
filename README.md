@@ -71,6 +71,9 @@ Only things evidenced in this repo.
 
 Latest entries (full list in the [journal index](journal/README.md)):
 
+- 21/10/2026: [Turning my music app into a Windows Media Player](journal/2026/2026-10-21.md)
+- 20/10/2026: [Dashboard themes and a local AI for playlists](journal/2026/2026-10-20.md)
+- 17/10/2026: [Windows XP and 7 themes, and a Start menu built from scratch](journal/2026/2026-10-17-windows-themes.md)
 - 15/10/2026: [VoltOps, texted receipts and an audit pass](journal/2026/2026-10-15.md)
 - 12/10/2026: [Finding a Linux desktop that works for me](journal/2026/2026-10-12-linux-desktop.md)
 - 12/10/2026: [The homelab so far, and a repeatable security audit](journal/2026/2026-10-12-homelab.md)
