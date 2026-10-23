@@ -65,6 +65,7 @@ I built the first version of the FoxWhitty Photography site myself, in a single 
 - **Static first.** Nothing to patch, nothing to crash, near-zero running cost. Server code exists only where a form needs it.
 - **Keep secrets out of the repository.** API keys live as Cloudflare secrets and in a gitignored file for local testing. Plain settings sit in the config file; secrets never do.
 - **Say what is actually offered.** In October I replaced a "software development" service page on the repair site with an "Engineering" page, to describe the work more accurately.
+- **Reuse the protected form.** In October I added an "Unwanted Tech" page to the repair site, for donated and purchased second-hand equipment. Its enquiry form, with optional photos sent as email attachments, goes through the same server code as the contact form, so it gets every protection described below. See the [journal entry](../journal/2026/2026-10-23-unwanted-tech.md).
 - **Rebuild a lost site from production** rather than rewrite it (see below).
 
 ## Security considerations
