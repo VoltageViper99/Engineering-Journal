@@ -13,6 +13,8 @@ featured: false
 
 [Back to projects](README.md)
 
+> **Status: retired on 31/10/2026.** The kiosk was the only thing that could play music from the server. The server now plays music itself through [Voltage Music](voltage-music.md), so the kiosk and its code were removed from the Control Centre. This page is kept as a record. See [the entry](../journal/2026/2026-10-31.md).
+
 ## Summary
 
 The kiosk is the on-screen half of the [Control Centre](control-centre.md): a small native PySide6 (Qt) application on a dedicated display box. It shows the dashboard pages and plays the audio when I use the music page as a remote.

@@ -67,6 +67,10 @@ The major steps, newest last. Dates are from the project history.
 - **07/10/2026 onwards:** a Settings page, session handling consolidated, dead code removed and duplicated helpers merged, Bluetooth auto-reconnect for the kiosk, CPU temperature and security status improvements.
 - **17/10/2026 to 20/10/2026:** a theme picker with eight Windows-era looks, a terminal remote for the music app and a local AI helper for Smart Playlists. See the [journal entry](../journal/2026/2026-10-20.md).
 - **21/10/2026:** the music app became a Windows Media Player style player, with editable playlists, a radio station manager, a settings page and a choice of speaker, including the browser in my hand. The kiosk's automatic Bluetooth reconnect was removed in favour of picking the speaker in Settings. See the [journal entry](../journal/2026/2026-10-21.md).
+- **24/10/2026 to 28/10/2026:** rebuilt in ten phases with a new look (Nocturne), a browser terminal, live logs, backup status with stale-backup alerts, whole-stack Pull, Up and Down actions, disk and snapshot space views and a phone layout. See the [journal entry](../journal/2026/2026-10-27.md).
+- **29/10/2026 to 30/10/2026:** a small read-only status endpoint, with its own key, for the [Voltage Business Portal](voltage-business-portal.md). See the [journal entry](../journal/2026/2026-10-30.md).
+- **31/10/2026:** the music app was split out into its own app, [Voltage Music](voltage-music.md), and the kiosk was retired. The Control Centre is now only the infrastructure console. See the [journal entry](../journal/2026/2026-10-31.md).
+- **01/11/2026:** the database's side file was capped at 64 MB after it grew to 1.7 GB, and the terminal page's missing proxy route was added. See the [journal entry](../journal/2026/2026-11-01.md).
 
 See the [journal entry](../journal/2026/2026-10-09.md) for the story behind the earlier steps.
 
@@ -91,7 +95,7 @@ Python, Flask, SQLite, waitress, systemd, Docker Engine API, Cloudflare API, a P
 - **Opt-in, tiered actions.** Container actions are off until enabled and limited by protection levels (normal, protected, critical) enforced on the server. They apply to one container at a time, with no stack-wide actions and no way to create or remove containers.
 - **Log before enforcing.** Permission tiers for API keys started in a log-only mode, so I could check real traffic against them before anything was denied.
 - **Keep secrets out of config.** Preferences live in one file and secrets in a separate restricted environment file, checked when the service starts.
-- **Split music out.** Its own process, session and workers, so it cannot take the dashboard down.
+- **Split music out.** First its own process, session and workers, so it cannot take the dashboard down. On 31/10/2026 it became a separate app with its own repository, login and data.
 - **Replace, don't add.** Homarr was removed once this covered what I used it for. Fewer dashboards means fewer things to keep correct.
 
 ## Security considerations
@@ -114,7 +118,7 @@ Python, Flask, SQLite, waitress, systemd, Docker Engine API, Cloudflare API, a P
 
 ## Current status
 
-In daily use and under active development. Known next steps: a proper phone layout, backup status on the overview and a Home Assistant quick-controls card.
+In daily use. Since 31/10/2026 it is only the infrastructure console: music and the kiosk have moved out. The phone layout and backup status are done. Known next steps: tidy the leftover music tables in its database and a Home Assistant quick-controls card.
 
 ## Lessons learned
 

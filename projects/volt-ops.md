@@ -71,7 +71,7 @@ Python, pywebview, Textual, SQLite, Cloudflare Workers and Pages, an SMS service
 
 ## Current status
 
-In daily use, with the most active development in October 2026. See [VoltOps, texted receipts and an audit pass](../journal/2026/2026-10-15.md). The long-term goal is for it to replace my remaining business tools. Accounting software has already been replaced.
+In daily use, with the most active development in October 2026. See [VoltOps, texted receipts and an audit pass](../journal/2026/2026-10-15.md). On 30/10/2026 it moved off my desktop and now runs on the server with no window of its own, behind the [Voltage Business Portal](voltage-business-portal.md). The desktop window and the terminal interface are retired. It gained manual software licence issuing, a software-sale job type and a receipts-only access token for an agent on my development machine. See [the switch](../journal/2026/2026-10-30.md) and [clean-up day](../journal/2026/2026-11-01.md). The long-term goal is for it to replace my remaining business tools. Accounting software has already been replaced.
 
 ## Lessons learned
 
