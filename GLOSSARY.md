@@ -8,6 +8,7 @@ Plain-English explanations of the technical words that come up in this journal. 
 | --- | --- |
 | AI model (local) | A program that has learned patterns from a lot of text and can answer in sentences. "Local" means it runs on my own server instead of a company's cloud, so what I type never leaves the house. |
 | API | A doorway one program uses to ask another program for something. A web page is for people; an API is the same idea for software. |
+| API token | A long secret that stands in for a password when one program talks to another. Mine can be limited to one job, such as filing receipts, so a leaked token can do little damage. |
 | Audit | A careful check of what a system is really doing, compared with what I think it is doing. Done before changing anything. |
 | Backup | A second copy of data kept somewhere else, so losing one copy is not the end of the world. |
 | Bluetooth speaker (paired) | A wireless speaker that has already been introduced to a device once, so they can connect again without setting up from scratch. |
@@ -25,8 +26,10 @@ Plain-English explanations of the technical words that come up in this journal. 
 | Docker | The tool that runs containers on my server. |
 | fail2ban | A guard program that watches for repeated failed logins and blocks the source for a while. |
 | Firewall | A gatekeeper on a computer or network that decides which connections are allowed in or out. |
+| Gapless playback | Playing one track straight into the next with no pause, so albums that run together sound the way they were made. |
 | Git | A tool that records every change to a set of files, who made it and why, so any change can be looked at or undone later. |
 | GitHub | A website that stores Git projects online. This journal lives there. |
+| Headless | A program or computer that runs with no screen or window of its own. You use it through a web page or another program instead. |
 | Homelab | A small set of computers at home, run like a miniature company IT setup, for learning and for real family and business services. |
 | HTTPS / TLS | The padlock in your browser. The connection is encrypted, so nobody in between can read it. |
 | Kiosk | A computer that shows one app full screen, all the time, like a screen in a shop. Mine shows the dashboard and plays the music. |
@@ -35,6 +38,7 @@ Plain-English explanations of the technical words that come up in this journal. 
 | Log | A diary a program writes as it runs: what it did, and what went wrong. The first place to look when something breaks. |
 | Loopback | A connection a computer makes to itself. A service that only listens on loopback cannot be reached from any other machine. |
 | Monitoring | Tools that keep checking that services are up and tell me when something is not. |
+| mpv | A small, free audio and video player that other programs can control. My music app uses it to play from the server. |
 | Notification (ntfy) | The service that sends alerts to my phone, for example when an update fails. I run my own. |
 | Ollama | The program that runs AI models on my own server. |
 | Open source | Software whose code anyone can read, and usually reuse. Most of what I run is open source. |
@@ -43,6 +47,7 @@ Plain-English explanations of the technical words that come up in this journal. 
 | Python | A programming language known for being readable. I use it for scripts and learned it on my CD backup project. |
 | Rate limiting | A rule like "no more than five tries in ten minutes", which stops a robot hammering a form or a login. |
 | Repository (repo) | A project folder tracked by Git, with its full history of changes. |
+| Restore test | Taking a backup and actually bringing the files back, to prove the backup works. A backup you have never restored is only a hope. |
 | Reverse proxy | A receptionist for my services. Everything goes through one front door by name, and the proxy passes each visitor to the right service behind it. |
 | Rollback | Going back to the previous version when a change goes wrong. |
 | Script | A small program that does a job I would otherwise do by hand. |
@@ -56,4 +61,5 @@ Plain-English explanations of the technical words that come up in this journal. 
 | Turnstile | Cloudflare's check that a website visitor is a person and not a robot, without the "click every traffic light" puzzles. |
 | Uptime Kuma | The monitoring tool that keeps checking my services and alerts me if one stops answering. |
 | VPN | A private, encrypted tunnel between devices over the internet. Tailscale is a kind of VPN. |
+| WAL (write-ahead log) | A side file a database uses to record recent changes before they are folded into the main file. If it is not trimmed, it can grow very large. |
 | Web UI | A settings or control page that opens in a web browser, instead of editing files by hand. |

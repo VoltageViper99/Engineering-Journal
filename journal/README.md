@@ -8,6 +8,10 @@ Dated engineering logs, newest first. Each entry covers what I worked on, what c
 
 | Date | Entry | Focus |
 | --- | --- | --- |
+| 01/11/2026 | [Clean-up day, and the Bluetooth that dropped when I turned off my computer](2026/2026-11-01.md) | A database file capped, a proxy route, a licence key restored safely, a merge that broke the app, a Bluetooth fault traced through the logs, a cloud restore test |
+| 31/10/2026 | [Giving the music app its own home](2026/2026-10-31.md) | Music split out of the Control Centre, the kiosk retired, gapless playback from the server, a new design |
+| 30/10/2026 | [A business portal, and moving VoltOps onto the server](2026/2026-10-30.md) | One front door for the business, a rehearsed switch to the server, a limited login for a helper |
+| 27/10/2026 | [A new look for the Control Centre, and a terminal in the browser](2026/2026-10-27.md) | Ten rebuild phases, a shell and live logs in the browser, backup freshness alerts, a phone layout |
 | 23/10/2026 | [An Unwanted Tech page, reusing the form defences](2026/2026-10-23-unwanted-tech.md) | A donation and purchase enquiry page, one protected form backend for two forms, photos sent as email attachments |
 | 21/10/2026 | [Turning my music app into a Windows Media Player](2026/2026-10-21.md) | A phased rebuild in 17 small pull requests: skins per theme, tablet fixes, editable playlists, a radio manager, settings and a choice of speaker |
 | 20/10/2026 | [Dashboard themes and a local AI for playlists](2026/2026-10-20.md) | Eight Windows-era themes, a terminal music remote and a local AI helper that can only suggest |

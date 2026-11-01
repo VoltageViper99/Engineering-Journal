@@ -52,7 +52,11 @@ This repository is where I write that work down: what I built or changed, why, w
 
 **Business websites.** Three small business sites (my repair business, a photography business and the invoicing product site) deployed from Git to Cloudflare Pages, with a contact form hardened by Turnstile, rate limiting and a honeypot. I built the first version of the photography site myself; the later redesign and the other sites' code were largely AI-assisted. The setup, security and operation are mine. [Business websites](projects/business-websites.md), [the deploy that failed quietly](journal/2026/2026-10-12.md).
 
-**Other projects.** [VoltOS](projects/voltos.md), [VoltOps](projects/volt-ops.md), [Holocron Kiosk](projects/holocron-kiosk.md).
+**Voltage Business Portal and VoltOps.** One front door for the repair business: a small website that brings the repair app, software licences and server status together, with a limited login for a helper. VoltOps moved from my desktop onto the server in a rehearsed, written-down switch. *What I did:* decided what the portal shows and may do, planned and ran the switch, and operate it. [Voltage Business Portal](projects/voltage-business-portal.md), [VoltOps](projects/volt-ops.md), [the switch](journal/2026/2026-10-30.md).
+
+**Voltage Music.** The music player, moved out of the Control Centre into its own app so a fault in one cannot reach the other. The server now plays the music itself, gapless, through a Bluetooth adapter. [Voltage Music](projects/voltage-music.md), [the split](journal/2026/2026-10-31.md).
+
+**Other projects.** [VoltOS](projects/voltos.md), [Holocron Kiosk](projects/holocron-kiosk.md) (retired).
 
 ## Skills demonstrated
 
@@ -74,6 +78,10 @@ Only things evidenced in this repo.
 
 Latest entries (full list in the [journal index](journal/README.md)):
 
+- 01/11/2026: [Clean-up day, and the Bluetooth that dropped when I turned off my computer](journal/2026/2026-11-01.md)
+- 31/10/2026: [Giving the music app its own home](journal/2026/2026-10-31.md)
+- 30/10/2026: [A business portal, and moving VoltOps onto the server](journal/2026/2026-10-30.md)
+- 27/10/2026: [A new look for the Control Centre, and a terminal in the browser](journal/2026/2026-10-27.md)
 - 21/10/2026: [Turning my music app into a Windows Media Player](journal/2026/2026-10-21.md)
 - 20/10/2026: [Dashboard themes and a local AI for playlists](journal/2026/2026-10-20.md)
 - 17/10/2026: [Windows XP and 7 themes, and a Start menu built from scratch](journal/2026/2026-10-17-windows-themes.md)
