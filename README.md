@@ -82,6 +82,8 @@ Latest entries (full list in the [journal index](journal/README.md)):
 - 31/10/2026: [Giving the music app its own home](journal/2026/2026-10-31.md)
 - 30/10/2026: [A business portal, and moving VoltOps onto the server](journal/2026/2026-10-30.md)
 - 27/10/2026: [A new look for the Control Centre, and a terminal in the browser](journal/2026/2026-10-27.md)
+- 23/10/2026: [Cleaning up a Fedora Xfce workstation without breaking the themes](journal/2026/2026-10-23-fedora-cleanup.md)
+- 23/10/2026: [An Unwanted Tech page, reusing the form defences](journal/2026/2026-10-23-unwanted-tech.md)
 - 21/10/2026: [Turning my music app into a Windows Media Player](journal/2026/2026-10-21.md)
 - 20/10/2026: [Dashboard themes and a local AI for playlists](journal/2026/2026-10-20.md)
 - 17/10/2026: [Windows XP and 7 themes, and a Start menu built from scratch](journal/2026/2026-10-17-windows-themes.md)
@@ -106,6 +108,69 @@ Latest entries (full list in the [journal index](journal/README.md)):
 
 - GitHub: [VoltageViper99](https://github.com/VoltageViper99)
 - Business: [Voltage PC Repairs](https://voltagepcrepairs.com.au)
+
+## Working on this repo
+
+This is a public repo of Markdown, images and a commit hook. There is nothing to build or run.
+
+**One-time setup per clone** (details in the [publication guide](PUBLICATION-GUIDE.md)):
+
+1. Install [gitleaks](https://github.com/gitleaks/gitleaks#installing) (v8.30.0 on this machine).
+2. Turn on the tracked hook: `git config core.hooksPath .githooks`. Check with `git config --get core.hooksPath`.
+
+The hook scans staged changes for secrets plus private/Tailscale IPs and `.ts.net` hostnames, and **refuses the commit if gitleaks isn't
+installed**. Full history scan any time: `gitleaks git --redact --config .gitleaks.toml`.
+
+**Adding a journal entry:**
+
+1. Create `journal/2026/YYYY-MM-DD.md` (or `YYYY-MM-DD-topic.md` if there are several that day) with the front matter from the
+   publication guide, a "Back to journal index" link, and an "In short" box.
+2. Add a row to the table in `journal/README.md` and to "Latest entries" above.
+3. Check images against the list in `assets/README.md`, then read `git diff --staged` before committing.
+
+**Check for broken relative links** (read-only; run from the repo root):
+
+```bash
+python3 -B - <<'PY'
+import re, os, glob
+for f in glob.glob('**/*.md', recursive=True):
+    for m in re.finditer(r'\]\(([^)#\s]+)(#[^)]*)?\)', open(f).read()):
+        l = m.group(1)
+        if not l.startswith(('http', 'mailto')) and not os.path.exists(os.path.normpath(os.path.join(os.path.dirname(f), l))):
+            print(f, '->', l)
+PY
+```
+
+(As of 2026-11-03 the only hit is the example link inside a code block in `PUBLICATION-GUIDE.md`, which is fine.)
+
+## Troubleshooting
+
+**Commit refused: "gitleaks is not installed"**
+The hook fails closed on purpose. Install gitleaks (`which gitleaks` to check), then retry. Don't use `--no-verify` on this public repo.
+
+**Commit refused with a finding**
+The hook prints a redacted match with file and line. Fix the content: describe roles instead of addresses (see the publication guide's
+sanitising table). If it's a genuine false positive, add a narrow allowlist entry (path plus pattern, with a comment) to
+`.gitleaks.toml`; don't disable rules. Commonly triggered by example IPs like `192.168.x.x` or `100.64-127.x.x` in text, and by
+anything ending `.ts.net`.
+
+**The hook isn't running at all (commits go through unscanned)**
+Check `git config --get core.hooksPath`. It should print `.githooks`. It's a per-clone setting, so a fresh clone has it unset: re-run step 2 above. Also check
+`.githooks/pre-commit` is executable (`ls -l .githooks/pre-commit`).
+
+**gitleaks complains about unknown command `git` or `--staged`**
+Old gitleaks. The hook already falls back to `gitleaks protect --staged` for versions before 8.19; if both fail, update gitleaks.
+
+**GitHub won't render a page, or shows the front matter as text**
+The front matter YAML is invalid (an earlier commit, "Fix front matter that GitHub could not parse", was this). Check the `---` fences
+are the first and last lines of the block, strings with a colon are quoted, and `tags:` is a list.
+
+**A page is marked `public: false` but I committed it**
+It's still public. That flag only marks a draft for a possible future website feed; see the warning in the publication guide. If it
+contained something sensitive: rotate the secret first, then deal with history.
+
+**A new entry is missing from the index**
+The index (`journal/README.md`) and "Latest entries" above are edited by hand, so nothing updates them. Add the entry to both.
 
 ## Licence
 
