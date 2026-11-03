@@ -62,7 +62,7 @@ Fedora, RPM and dnf, QEMU/KVM, kickstart, systemd, greetd, Hyprland, Waybar, Pip
 
 ## Current status
 
-Experimental. Currently at milestone 6 (branding and power actions).
+Archived: no longer under active development. The last work was on 2026-10-18, milestone 8: the Windows 98 theme running as a Plasma theme applied by `themectl`, with the desktop themes packaged as their own RPM. Earlier milestones covered branding and power actions (milestone 6) and the pivot to Plasma (milestone 7).
 
 ## Lessons learned
 
