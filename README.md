@@ -34,7 +34,7 @@ This repository is where I write that work down: what I built or changed, why, w
 
 ## Featured work
 
-**Control Centre.** The tool that makes a large Docker and server stack manageable. One dashboard shows every stack, host health, security and update status, and the invoicing pipeline, and lets me restart or upgrade a single container safely with protection levels, health checks and a one-time undo. It is the project I use most and have put the most thought into. The code was largely written with AI assistance. *What I did:* defined the problem, designed what it shows and what it may do, tested every change against the real lab, and run it daily. [Control Centre](projects/control-centre.md), [how it grew](journal/2026/2026-10-09.md).
+**Control Centre.** The tool that makes a large Docker and server stack manageable. One dashboard shows every stack, host health, security and update status, and lets me restart or upgrade a single container safely with protection levels, health checks and a one-time undo. It is the project I use most and have put the most thought into. The code was largely written with AI assistance. *What I did:* defined the problem, designed what it shows and what it may do, tested every change against the real lab, and run it daily. [Control Centre](projects/control-centre.md), [how it grew](journal/2026/2026-10-09.md).
 
 ![Control Centre overview showing weather, server health, containers, music and the invoicing pipeline](assets/screenshots/control-centre-overview.png)
 
@@ -46,11 +46,10 @@ This repository is where I write that work down: what I built or changed, why, w
 
 **Monitoring.** Uptime Kuma, Dozzle, a UPS dashboard and self-hosted ntfy notifications, kept in step with every service move. [Monitoring](infrastructure/monitoring.md).
 
-**Supporter Invoicing.** A live product with a public website and a purchase pipeline I built and run: signed agreement (self-hosted Documenso), Stripe payment, Cloudflare Worker licence issuing and CI-built signed installers. The code was largely AI-assisted; the pipeline design, deployment and testing are mine. [Supporter Invoicing](projects/supporter-invoicing.md).
 
 **CD Backup Script.** A Python tool that copies old data discs to server storage, with dry runs, clean failure handling and an optional full-screen interface. This is the one project here where I wrote most of the core code myself, as a way to learn Python. [CD Backup Script](projects/cd-backup.md).
 
-**Business websites.** Three small business sites (my repair business, a photography business and the invoicing product site) deployed from Git to Cloudflare Pages, with a contact form hardened by Turnstile, rate limiting and a honeypot. I built the first version of the photography site myself; the later redesign and the other sites' code were largely AI-assisted. The setup, security and operation are mine. [Business websites](projects/business-websites.md), [the deploy that failed quietly](journal/2026/2026-10-12.md).
+**Business websites.** Two small business sites (my repair business and a photography business) deployed from Git to Cloudflare Pages, with a contact form hardened by Turnstile, rate limiting and a honeypot. I built the first version of the photography site myself; the later redesign and the other sites' code were largely AI-assisted. The setup, security and operation are mine. [Business websites](projects/business-websites.md), [the deploy that failed quietly](journal/2026/2026-10-12.md).
 
 **Voltage Business Portal and VoltOps.** One front door for the repair business: a small website that brings the repair app, software licences and server status together, with a limited login for a helper. VoltOps moved from my desktop onto the server in a rehearsed, written-down switch. *What I did:* decided what the portal shows and may do, planned and ran the switch, and operate it. [Voltage Business Portal](projects/voltage-business-portal.md), [VoltOps](projects/volt-ops.md), [the switch](journal/2026/2026-10-30.md).
 

@@ -14,6 +14,5 @@ Each page follows the same structure: summary, problem, architecture, technologi
 | [VoltOps](volt-ops.md) | Repair shop app (jobs, invoices, expenses), now running on the server | In daily use |
 | [CD Backup Script](cd-backup.md) | Python tool that copies old data discs to server storage, one disc after another | Working |
 | [Business Websites](business-websites.md) | Three small business sites on Cloudflare Pages, with a hardened contact form | Live |
-| [Supporter Invoicing](supporter-invoicing.md) | Live invoicing product with a Cloudflare, Stripe and Documenso purchase and licensing pipeline | Live |
 
 Infrastructure work (homelab, reverse proxy, monitoring) lives in [`infrastructure/`](../infrastructure/README.md).

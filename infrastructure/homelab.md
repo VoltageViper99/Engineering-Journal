@@ -42,7 +42,7 @@ flowchart TB
 
 ## How it grew
 
-The lab has been in Git since July. The major steps: network-wide DNS filtering first, then media and file-sync stacks, a business database and the invoicing services in September, opt-in updates, the private reverse proxy and a security audit in early October. Removing redundant tools has been as much a part of it as adding new ones. The full story, with the decisions, is in the [journal entry on the homelab so far](../journal/2026/2026-10-12-homelab.md).
+The lab has been in Git since July. The major steps: network-wide DNS filtering first, then media and file-sync stacks, a business database in September, opt-in updates, the private reverse proxy and a security audit in early October. Removing redundant tools has been as much a part of it as adding new ones. The full story, with the decisions, is in the [journal entry on the homelab so far](../journal/2026/2026-10-12-homelab.md).
 
 ## My role
 
@@ -56,7 +56,6 @@ I designed the layout and the principles below, deployed and migrated the servic
 - Photo and video backup
 - Home automation
 - Monitoring, log viewing and push notifications (see [Monitoring](monitoring.md))
-- Business tooling for Supporter Invoicing, such as agreement signing, licence records and automation
 - A central internal dashboard (see [Control Centre](../projects/control-centre.md))
 - A self-hosted design and prototyping tool
 

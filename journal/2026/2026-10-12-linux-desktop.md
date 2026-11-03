@@ -57,7 +57,7 @@ I follow a classic Windows 98 look and feel, flat and square with no blur or ani
 
 ### Why this matters beyond my desktop
 
-My philosophy is that software should be easy for people who are not into computers as much as I am. The clearest example is [Supporter Invoicing](../../projects/supporter-invoicing.md). I designed it for my mum, who is not a technical user. She has had no problems using it, loves it and, in her words, could not go back to doing invoices manually. I use the same test for everything I build or set up: if a non-technical person cannot use it without help, the design is wrong.
+My philosophy is that software should be easy for people who are not into computers as much as I am. The clearest example is Supporter Invoicing (since retired). I designed it for my mum, who is not a technical user. She has had no problems using it, loves it and, in her words, could not go back to doing invoices manually. I use the same test for everything I build or set up: if a non-technical person cannot use it without help, the design is wrong.
 
 ### The tools around the desktop changed too
 
