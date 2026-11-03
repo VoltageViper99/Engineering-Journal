@@ -28,7 +28,7 @@ Both are plain HTML, CSS and JavaScript with no framework and no build step. Eac
 
 ## Problem
 
-A small business needs a site that is fast, cheap to run, easy to change and hard to abuse. I did not want a CMS to patch, a server to maintain or a monthly hosting bill for what is mostly static content. The only dynamic parts are forms, booking and (for the product site) buying, so those are the parts that need real care.
+A small business needs a site that is fast, cheap to run, easy to change and hard to abuse. I did not want a CMS to patch, a server to maintain or a monthly hosting bill for what is mostly static content. The only dynamic parts are forms, booking, so those are the parts that need real care.
 
 ## Architecture
 
