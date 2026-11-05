@@ -77,7 +77,7 @@ Only things evidenced in this repo.
 
 Latest entries (full list in the [journal index](journal/README.md)):
 
-- 05/11/2026: [Automated Torrent Seedbox with Safe Manual Import Gate](journal/2026/2026-11-05.md)
+- 05/11/2026: [Automated Torrent Seedbox with Safe Manual Import Gate](journal/2026/2026-11-05-linux-torrents.md)
 - 01/11/2026: [Clean-up day, and the Bluetooth that dropped when I turned off my computer](journal/2026/2026-11-01.md)
 - 31/10/2026: [Giving the music app its own home](journal/2026/2026-10-31.md)
 - 30/10/2026: [A business portal, and moving VoltOps onto the server](journal/2026/2026-10-30.md)
