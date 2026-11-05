@@ -77,6 +77,7 @@ Only things evidenced in this repo.
 
 Latest entries (full list in the [journal index](journal/README.md)):
 
+- 05/11/2026: [Bash script for keeping Git repositorys in sync](journal/2026/2026-11-05-git-sync.md)
 - 05/11/2026: [Automated Torrent Seedbox with Safe Manual Import Gate](journal/2026/2026-11-05-linux-torrents.md)
 - 01/11/2026: [Clean-up day, and the Bluetooth that dropped when I turned off my computer](journal/2026/2026-11-01.md)
 - 31/10/2026: [Giving the music app its own home](journal/2026/2026-10-31.md)
@@ -84,19 +85,6 @@ Latest entries (full list in the [journal index](journal/README.md)):
 - 27/10/2026: [A new look for the Control Centre, and a terminal in the browser](journal/2026/2026-10-27.md)
 - 23/10/2026: [Cleaning up a Fedora Xfce workstation without breaking the themes](journal/2026/2026-10-23-fedora-cleanup.md)
 - 23/10/2026: [An Unwanted Tech page, reusing the form defences](journal/2026/2026-10-23-unwanted-tech.md)
-- 21/10/2026: [Turning my music app into a Windows Media Player](journal/2026/2026-10-21.md)
-- 20/10/2026: [Dashboard themes and a local AI for playlists](journal/2026/2026-10-20.md)
-- 17/10/2026: [Windows XP and 7 themes, and a Start menu built from scratch](journal/2026/2026-10-17-windows-themes.md)
-- 15/10/2026: [VoltOps, texted receipts and an audit pass](journal/2026/2026-10-15.md)
-- 12/10/2026: [Finding a Linux desktop that works for me](journal/2026/2026-10-12-linux-desktop.md)
-- 12/10/2026: [The homelab so far, and a repeatable security audit](journal/2026/2026-10-12-homelab.md)
-- 12/10/2026: [Business websites, and a security fix that was not live](journal/2026/2026-10-12.md)
-- 10/10/2026: [Building a CD backup script in Python](journal/2026/2026-10-10.md)
-- 09/10/2026: [Control Centre, from dashboard to operations hub](journal/2026/2026-10-09.md)
-- 04/10/2026: [Retiring Portainer and hardening network exposure](journal/2026/2026-10-04.md)
-- 03/10/2026: [Internal reverse proxy rollout](journal/2026/2026-10-03.md)
-- 29/09/2026: [Scoped automatic container updates](journal/2026/2026-09-29.md)
-- 26/09/2026: [Container update tooling and service cleanup](journal/2026/2026-09-26.md)
 
 ## Current learning
 
