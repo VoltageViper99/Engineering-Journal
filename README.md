@@ -36,7 +36,7 @@ This repository is where I write that work down: what I built or changed, why, w
 
 **Control Centre.** The tool that makes a large Docker and server stack manageable. One dashboard shows every stack, host health, security and update status, and lets me restart or upgrade a single container safely with protection levels, health checks and a one-time undo. It is the project I use most and have put the most thought into. The code was largely written with AI assistance. *What I did:* defined the problem, designed what it shows and what it may do, tested every change against the real lab, and run it daily. [Control Centre](projects/control-centre.md), [how it grew](journal/2026/2026-10-09.md).
 
-![Control Centre overview showing weather, server health, containers, music and the invoicing pipeline](assets/screenshots/control-centre-overview.png)
+![Control Centre overview showing weather, server health, containers, music and the invoicing pipeline](images/cc-overview.png)
 
 **Homelab and reverse proxy.** One Docker host running Compose stacks defined in version control, with internal services reached by name through a private Caddy proxy over LAN and Tailscale. A few services are published through Cloudflare Tunnel instead of port forwards. *What I did:* designed the layout, deployed and migrated the services, and wrote the migration order and rollback steps. [Homelab](infrastructure/homelab.md), [Reverse proxy](infrastructure/reverse-proxy.md).
 
@@ -77,6 +77,7 @@ Only things evidenced in this repo.
 
 Latest entries (full list in the [journal index](journal/README.md)):
 
+- 05/11/2026: [Automated Torrent Seedbox with Safe Manual Import Gate](journal/2026/2026-11-05.md)
 - 01/11/2026: [Clean-up day, and the Bluetooth that dropped when I turned off my computer](journal/2026/2026-11-01.md)
 - 31/10/2026: [Giving the music app its own home](journal/2026/2026-10-31.md)
 - 30/10/2026: [A business portal, and moving VoltOps onto the server](journal/2026/2026-10-30.md)
