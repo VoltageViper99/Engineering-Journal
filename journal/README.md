@@ -8,7 +8,7 @@ Dated engineering logs, newest first. Each entry covers what I worked on, what c
 
 | Date | Entry | Focus |
 | --- | --- | --- |
-| 06/11/2026 | [Network wide encrypted DNS With AdGuard Home](2026/2026-11-26-encrypted-dns-setup.md) | Configured AdGuard Home with Let's Encrypt certificates to provide encrypted DNS (DoT/DoH) across all network devices, replacing unencrypted ISP DNS with privacy-focused, ad-filtered DNS resolution. |
+| 06/11/2026 | [Network wide encrypted DNS With AdGuard Home](2026/2026-11-06-encrypted-dns-setup.md) | Configured AdGuard Home with Let's Encrypt certificates to provide encrypted DNS (DoT/DoH) across all network devices, replacing unencrypted ISP DNS with privacy-focused, ad-filtered DNS resolution. |
 | 05/11/2026 | [Automated Torrent Seedbox with Safe Manual Import Gate](2026/2026-11-05-linux-torrents.md) | Split-script discovery and import, unattended systemd timer fetch with manual qBittorrent approval, ntfy notifications and structured file layout |
 | 01/11/2026 | [Clean-up day, and the Bluetooth that dropped when I turned off my computer](2026/2026-11-01.md) | A database file capped, a proxy route, a licence key restored safely, a merge that broke the app, a Bluetooth fault traced through the logs, a cloud restore test |
 | 31/10/2026 | [Giving the music app its own home](2026/2026-10-31.md) | Music split out of the Control Centre, the kiosk retired, gapless playback from the server, a new design |
