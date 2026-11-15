@@ -8,7 +8,9 @@ Dated engineering logs, newest first. Each entry covers what I worked on, what c
 
 | Date | Entry | Focus |
 | --- | --- | --- |
+| 15/11/2026 | [An empty icon list, and rebuilding a Fedora package properly](2026/2026-11-15-lxqt-icons.md) | Empty icon theme picker traced to a compile-time version guard compiled out of the package, a local rebuild of lxqt-config against Qt 6.11 with a libkscreen 6.8 patch, and labwc window themes |
 | 06/11/2026 | [Network wide encrypted DNS With AdGuard Home](2026/2026-11-06-encrypted-dns-setup.md) | Configured AdGuard Home with Let's Encrypt certificates to provide encrypted DNS (DoT/DoH) across all network devices, replacing unencrypted ISP DNS with privacy-focused, ad-filtered DNS resolution. |
+| 05/11/2026 | [Bash script for keeping Git repositorys in sync](2026/2026-11-05-git-sync.md) | A pull-only sync script that walks a directory tree, skips repos with uncommitted work and reports failures per repository |
 | 05/11/2026 | [Automated Torrent Seedbox with Safe Manual Import Gate](2026/2026-11-05-linux-torrents.md) | Split-script discovery and import, unattended systemd timer fetch with manual qBittorrent approval, ntfy notifications and structured file layout |
 | 01/11/2026 | [Clean-up day, and the Bluetooth that dropped when I turned off my computer](2026/2026-11-01.md) | A database file capped, a proxy route, a licence key restored safely, a merge that broke the app, a Bluetooth fault traced through the logs, a cloud restore test |
 | 31/10/2026 | [Giving the music app its own home](2026/2026-10-31.md) | Music split out of the Control Centre, the kiosk retired, gapless playback from the server, a new design |

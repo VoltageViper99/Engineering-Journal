@@ -77,6 +77,7 @@ Only things evidenced in this repo.
 
 Latest entries (full list in the [journal index](journal/README.md)):
 
+- 15/11/2026: [An empty icon list, and rebuilding a Fedora package properly](journal/2026/2026-11-15-lxqt-icons.md)
 - 06/11/2026: [Network wide encrypted DNS With AdGuard Home](journal/2026/2026-11-06-encrypted-dns-setup.md)
 - 05/11/2026: [Bash script for keeping Git repositorys in sync](journal/2026/2026-11-05-git-sync.md)
 - 05/11/2026: [Automated Torrent Seedbox with Safe Manual Import Gate](journal/2026/2026-11-05-linux-torrents.md)
