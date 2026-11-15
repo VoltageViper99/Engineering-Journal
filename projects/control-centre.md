@@ -45,7 +45,7 @@ A couple of dozen containers across many stacks meant a pile of separate admin p
 
 ## Screenshots
 
-![Control Centre overview: weather, server health, containers, music, invoicing pipeline and recent activity](../assets/screenshots/control-centre-overview.png)
+![Control Centre overview: weather, server health, containers, music, invoicing pipeline and recent activity](../assets/screenshots/cc-overview.png)
 
 *The overview page. The security panel is blanked out in this public copy.*
 
